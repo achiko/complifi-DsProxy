@@ -81,8 +81,8 @@ contract("CallActions", async (accounts) => {
       const tokenDecimals = await decimals().call();
       const amount = new BigNumber(7);
 
-      //const params = [vaultAddress, collateralAddress, amount.toString()];
-      const params = [vaultAddress, blackToken.address, amount.toString()];
+      const params = [vaultAddress, collateralAddress, amount.toString()];
+      //const params = [vaultAddress, blackToken.address, amount.toString()];
 
       const functionSig = web3.eth.abi.encodeFunctionSignature(
         "callMint(address,address,uint256)"
