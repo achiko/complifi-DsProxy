@@ -65,7 +65,9 @@ contract CallActions {
         uint256 _collateralAmount
     ) public returns (bool success) {
         
-        IERC20 collateral = IIERC20(_collateralToken);
+        Vars memory vars;
+        
+        IIERC20 collateral = IIERC20(_collateralToken);
 
         // 1. Approve 
         // !sender is not ms.sender its the contract address address(this)
