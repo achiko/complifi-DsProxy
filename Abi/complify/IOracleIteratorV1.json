@@ -1,0 +1,757 @@
+{
+  "contractName": "IOracleIteratorV1",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "isOracleIterator",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_oracle",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_timestamp",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_roundHint",
+          "type": "uint256"
+        }
+      ],
+      "name": "getUnderlingValue",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_oracle\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_timestamp\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_roundHint\",\"type\":\"uint256\"}],\"name\":\"getUnderlingValue\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isOracleIterator\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"getUnderlingValue(address,uint256,uint256)\":{\"params\":{\"_oracle\":\"iteratable oracle through\",\"_roundHint\":\"specified round for a given timestamp\",\"_timestamp\":\"a given timestamp\"},\"returns\":{\"_0\":\"the value closest to a given timestamp\"}},\"isOracleIterator()\":{\"details\":\"Verifies that contract is a oracle iterator contract\",\"returns\":{\"_0\":\"true if contract is a oracle iterator contract\"}},\"symbol()\":{\"details\":\"Should be resolved through OracleIteratorRegistry contract\",\"returns\":{\"_0\":\"oracle iterator symbol\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"isOracleIterator()\":{\"notice\":\"Proof of oracle iterator contract\"},\"symbol()\":{\"notice\":\"Symbol of the oracle iterator\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/oracleIterators/IOracleIteratorV1.sol\":\"IOracleIteratorV1\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1000000},\"remappings\":[]},\"sources\":{\"/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/oracleIterators/IOracleIteratorV1.sol\":{\"keccak256\":\"0xa781a5cc68a2f54511472b68224305bd6aa00a02a7685bf0ee9d2acbe1c6a8a7\",\"license\":\"GNU General Public License v3.0\",\"urls\":[\"bzz-raw://94db4a1b3eb25d806e3817a9b6e31b34ae8c43153bfb157bbd9421377125a590\",\"dweb:/ipfs/QmXwpZA5tjA4sXVbDrXeouamc1ED4nkdBHVDAnXyH4i7Vw\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// \"SPDX-License-Identifier: GNU General Public License v3.0\"\n\npragma solidity >=0.4.21 <0.7.0;\n\ninterface IOracleIteratorV1 {\n    /// @notice Proof of oracle iterator contract\n    /// @dev Verifies that contract is a oracle iterator contract\n    /// @return true if contract is a oracle iterator contract\n    function isOracleIterator() external pure returns(bool);\n\n    /// @notice Symbol of the oracle iterator\n    /// @dev Should be resolved through OracleIteratorRegistry contract\n    /// @return oracle iterator symbol\n    function symbol() external view returns (string memory);\n\n    /// @notice Algorithm that, for the type of oracle used by the derivative,\n    //  finds the value closest to a given timestamp\n    /// @param _oracle iteratable oracle through\n    /// @param _timestamp a given timestamp\n    /// @param _roundHint specified round for a given timestamp\n    /// @return the value closest to a given timestamp\n    function getUnderlingValue(address _oracle, uint _timestamp, uint _roundHint) external view returns(int);\n}\n",
+  "sourcePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/oracleIterators/IOracleIteratorV1.sol",
+  "ast": {
+    "absolutePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/oracleIterators/IOracleIteratorV1.sol",
+    "exportedSymbols": {
+      "IOracleIteratorV1": [
+        6842
+      ]
+    },
+    "id": 6843,
+    "license": "GNU General Public License v3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6817,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "63:32:38"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 6842,
+        "linearizedBaseContracts": [
+          6842
+        ],
+        "name": "IOracleIteratorV1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 6818,
+              "nodeType": "StructuredDocumentation",
+              "src": "131:174:38",
+              "text": "@notice Proof of oracle iterator contract\n @dev Verifies that contract is a oracle iterator contract\n @return true if contract is a oracle iterator contract"
+            },
+            "functionSelector": "12df4d3e",
+            "id": 6823,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isOracleIterator",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 6819,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "335:2:38"
+            },
+            "returnParameters": {
+              "id": 6822,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6821,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6823,
+                  "src": "360:4:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 6820,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "360:4:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "359:6:38"
+            },
+            "scope": 6842,
+            "src": "310:56:38",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 6824,
+              "nodeType": "StructuredDocumentation",
+              "src": "372:152:38",
+              "text": "@notice Symbol of the oracle iterator\n @dev Should be resolved through OracleIteratorRegistry contract\n @return oracle iterator symbol"
+            },
+            "functionSelector": "95d89b41",
+            "id": 6829,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "symbol",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 6825,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "544:2:38"
+            },
+            "returnParameters": {
+              "id": 6828,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6827,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6829,
+                  "src": "570:13:38",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 6826,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "570:6:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "569:15:38"
+            },
+            "scope": 6842,
+            "src": "529:56:38",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 6830,
+              "nodeType": "StructuredDocumentation",
+              "src": "723:207:38",
+              "text": "@param _oracle iteratable oracle through\n @param _timestamp a given timestamp\n @param _roundHint specified round for a given timestamp\n @return the value closest to a given timestamp"
+            },
+            "functionSelector": "f9db70e1",
+            "id": 6841,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUnderlingValue",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 6837,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6832,
+                  "mutability": "mutable",
+                  "name": "_oracle",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6841,
+                  "src": "962:15:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6831,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "962:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6834,
+                  "mutability": "mutable",
+                  "name": "_timestamp",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6841,
+                  "src": "979:15:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6833,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "979:4:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6836,
+                  "mutability": "mutable",
+                  "name": "_roundHint",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6841,
+                  "src": "996:15:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6835,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "996:4:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "961:51:38"
+            },
+            "returnParameters": {
+              "id": 6840,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6839,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6841,
+                  "src": "1035:3:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 6838,
+                    "name": "int",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1035:3:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1034:5:38"
+            },
+            "scope": 6842,
+            "src": "935:105:38",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6843,
+        "src": "97:945:38"
+      }
+    ],
+    "src": "63:980:38"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/oracleIterators/IOracleIteratorV1.sol",
+    "exportedSymbols": {
+      "IOracleIteratorV1": [
+        6842
+      ]
+    },
+    "id": 6843,
+    "license": "GNU General Public License v3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 6817,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "63:32:38"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 6842,
+        "linearizedBaseContracts": [
+          6842
+        ],
+        "name": "IOracleIteratorV1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 6818,
+              "nodeType": "StructuredDocumentation",
+              "src": "131:174:38",
+              "text": "@notice Proof of oracle iterator contract\n @dev Verifies that contract is a oracle iterator contract\n @return true if contract is a oracle iterator contract"
+            },
+            "functionSelector": "12df4d3e",
+            "id": 6823,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isOracleIterator",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 6819,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "335:2:38"
+            },
+            "returnParameters": {
+              "id": 6822,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6821,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6823,
+                  "src": "360:4:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 6820,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "360:4:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "359:6:38"
+            },
+            "scope": 6842,
+            "src": "310:56:38",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 6824,
+              "nodeType": "StructuredDocumentation",
+              "src": "372:152:38",
+              "text": "@notice Symbol of the oracle iterator\n @dev Should be resolved through OracleIteratorRegistry contract\n @return oracle iterator symbol"
+            },
+            "functionSelector": "95d89b41",
+            "id": 6829,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "symbol",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 6825,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "544:2:38"
+            },
+            "returnParameters": {
+              "id": 6828,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6827,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6829,
+                  "src": "570:13:38",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 6826,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "570:6:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "569:15:38"
+            },
+            "scope": 6842,
+            "src": "529:56:38",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 6830,
+              "nodeType": "StructuredDocumentation",
+              "src": "723:207:38",
+              "text": "@param _oracle iteratable oracle through\n @param _timestamp a given timestamp\n @param _roundHint specified round for a given timestamp\n @return the value closest to a given timestamp"
+            },
+            "functionSelector": "f9db70e1",
+            "id": 6841,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getUnderlingValue",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 6837,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6832,
+                  "mutability": "mutable",
+                  "name": "_oracle",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6841,
+                  "src": "962:15:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 6831,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "962:7:38",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6834,
+                  "mutability": "mutable",
+                  "name": "_timestamp",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6841,
+                  "src": "979:15:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6833,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "979:4:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 6836,
+                  "mutability": "mutable",
+                  "name": "_roundHint",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6841,
+                  "src": "996:15:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 6835,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "996:4:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "961:51:38"
+            },
+            "returnParameters": {
+              "id": 6840,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 6839,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 6841,
+                  "src": "1035:3:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 6838,
+                    "name": "int",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1035:3:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1034:5:38"
+            },
+            "scope": 6842,
+            "src": "935:105:38",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 6843,
+        "src": "97:945:38"
+      }
+    ],
+    "src": "63:980:38"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-11-03T13:08:28.482Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "getUnderlingValue(address,uint256,uint256)": {
+        "params": {
+          "_oracle": "iteratable oracle through",
+          "_roundHint": "specified round for a given timestamp",
+          "_timestamp": "a given timestamp"
+        },
+        "returns": {
+          "_0": "the value closest to a given timestamp"
+        }
+      },
+      "isOracleIterator()": {
+        "details": "Verifies that contract is a oracle iterator contract",
+        "returns": {
+          "_0": "true if contract is a oracle iterator contract"
+        }
+      },
+      "symbol()": {
+        "details": "Should be resolved through OracleIteratorRegistry contract",
+        "returns": {
+          "_0": "oracle iterator symbol"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "isOracleIterator()": {
+        "notice": "Proof of oracle iterator contract"
+      },
+      "symbol()": {
+        "notice": "Symbol of the oracle iterator"
+      }
+    },
+    "version": 1
+  }
+}

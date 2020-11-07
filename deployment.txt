@@ -1,0 +1,724 @@
+achiko@Achi complifi-protocol % truffle migrate
+
+Compiling your contracts...
+===========================
+✔ Fetching solc version list from solc-bin. Attempt #1
+> Everything is up to date, there is nothing to compile.
+
+
+
+Starting migrations...
+======================
+> Network name:    'development'
+> Network id:      1604409614609
+> Block gas limit: 6721975 (0x6691b7)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0xef7845efd5f860034fe1d2092c5831e6b6f204d7f018f0edc1d5e7ab2d7bf624
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x3d50E21c8E768296D9Ee889cfD8fe1a70bCDea44
+   > block number:        1
+   > block timestamp:     1604409731
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             99.9724724
+   > gas used:            137638 (0x219a6)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0275276 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           0.0275276 ETH
+
+
+2_deploy_registries.js
+======================
+Delay 1000
+
+   Deploying 'OracleRegistry'
+   --------------------------
+   > transaction hash:    0x35988971e0f40ed570ce9a59f9aa872316195435a483df00bf2fbc0df7dea224
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xAe8e080d20159617c286867c3A6c26539062cA0F
+   > block number:        3
+   > block timestamp:     1604409734
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             99.867954
+   > gas used:            480338 (0x75452)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0960676 ETH
+
+Delay 1000
+OracleRegistry: 0xAe8e080d20159617c286867c3A6c26539062cA0F
+
+   Deploying 'OracleIteratorRegistry'
+   ----------------------------------
+   > transaction hash:    0x74d859ea8b8e22a096c71a03c92b1fd0ce2e5cbaed64df3482d1648093aa7d21
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x8E480023653e9d07fe1c5E1Ab55c089a42143389
+   > block number:        4
+   > block timestamp:     1604409735
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             99.74489
+   > gas used:            615320 (0x96398)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.123064 ETH
+
+Delay 1000
+OracleIteratorRegistry: 0x8E480023653e9d07fe1c5E1Ab55c089a42143389
+
+   Deploying 'CollateralTokenRegistry'
+   -----------------------------------
+   > transaction hash:    0xf6d1af4c6f05f9a91b62aec4af1c8b4cf60fcf7da20bcfa372c82ec5a1396698
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xcaf32F0e4029cbC0dC455846235520a022b5b6D8
+   > block number:        5
+   > block timestamp:     1604409737
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             99.6488224
+   > gas used:            480338 (0x75452)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0960676 ETH
+
+Delay 1000
+CollateralTokenRegistry: 0xcaf32F0e4029cbC0dC455846235520a022b5b6D8
+
+   Deploying 'CollateralSplitRegistry'
+   -----------------------------------
+   > transaction hash:    0x60e7b753410f9c364227e2f6e8f331108600ee13d9218ee9fee26b030208d960
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x6B1eA9386b714716a56361E01e50BD61E9387f68
+   > block number:        6
+   > block timestamp:     1604409738
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             99.525756
+   > gas used:            615332 (0x963a4)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.1230664 ETH
+
+Delay 1000
+CollateralSplitRegistry: 0x6B1eA9386b714716a56361E01e50BD61E9387f68
+
+   Deploying 'DerivativeSpecificationRegistry'
+   -------------------------------------------
+   > transaction hash:    0x59e176befd944094eff1e80b8b1e0f6ed291e75a85ec755e784c1bb13f631d6a
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xbA8104219C08d35e4C1A74f811cAc29Db3360847
+   > block number:        7
+   > block timestamp:     1604409740
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             99.3137628
+   > gas used:            1059966 (0x102c7e)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.2119932 ETH
+
+Delay 1000
+DerivativeSpecificationRegistry: 0xbA8104219C08d35e4C1A74f811cAc29Db3360847
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           0.6502588 ETH
+
+
+3_deploy_vault_factory.js
+=========================
+Delay 1000
+CONTRACT_ADMIN_ACCOUNT ::  0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+PROXY_ADMIN_ACCOUNT ::  0xedD5C6983F2E93eFc65E32DDC2A0be54fcD6F5d7
+
+   Deploying 'TokenBuilder'
+   ------------------------
+   > transaction hash:    0x9e109afd909b125ff687b02910a3e8801033b1db5a02c4c4d50c5cde321e7bac
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x53F95d92079A2e6ab24082d21A256B446DC74f43
+   > block number:        9
+   > block timestamp:     1604409745
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             98.7472922
+   > gas used:            2805099 (0x2acd6b)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.5610198 ETH
+
+Delay 1000
+
+   Deploying 'VaultBuilder'
+   ------------------------
+   > transaction hash:    0x18d2520e2717917e7cb1f93534dde1f2202967abece33a44e4633caa8e6fb6d0
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x180aB97ce59819993aD731805f5290f512D5df23
+   > block number:        10
+   > block timestamp:     1604409746
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             98.0218124
+   > gas used:            3627399 (0x375987)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.7254798 ETH
+
+Delay 1000
+
+   Deploying 'FeeLogger'
+   ---------------------
+   > transaction hash:    0x40a8ef6cc0011716c543d52eef3552ef8a7aa08c32f56baeb371ff4a44caa6a3
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xCdbc8E2C5523F42e32D235e264b0A84e07C88A50
+   > block number:        11
+   > block timestamp:     1604409748
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             97.9110598
+   > gas used:            553763 (0x87323)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.1107526 ETH
+
+Delay 1000
+
+   Deploying 'FeeLoggerProxy'
+   --------------------------
+   > transaction hash:    0xe52d519bf825b9f7cb9108b16cae8e39b30b7fb752b7db6d62c5c02d9324908a
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x4Fc5E77B0AD5b1c673f870378D5785e14476a4C6
+   > block number:        12
+   > block timestamp:     1604409749
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             97.8067468
+   > gas used:            521565 (0x7f55d)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.104313 ETH
+
+Delay 1000
+FeeLogger: 0xCdbc8E2C5523F42e32D235e264b0A84e07C88A50
+Delay 1000
+
+   Deploying 'VaultFactory'
+   ------------------------
+   > transaction hash:    0xe403091f2f305cbc050c5afe4365552da26d8926de9e235072ff9b4bdc65fadf
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x2aEd4bA78f1B983E63bE659ac9dE7ca7B362C9a1
+   > block number:        14
+   > block timestamp:     1604409752
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             97.2417352
+   > gas used:            2747702 (0x29ed36)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.5495404 ETH
+
+Delay 1000
+
+   Deploying 'VaultFactoryProxy'
+   -----------------------------
+   > transaction hash:    0x0a93112f783f930e07652dca24fbb73220a0ad4bcc1ab71e13d6a629f6c09c68
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x74f95b6f51C3FCF0330E8bcDbE365E6F54CC858A
+   > block number:        15
+   > block timestamp:     1604409754
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             97.1374222
+   > gas used:            521565 (0x7f55d)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.104313 ETH
+
+Delay 1000
+VaultFactoryProxy: 0x74f95b6f51C3FCF0330E8bcDbE365E6F54CC858A
+Delay 1000
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           2.1554186 ETH
+
+
+4_transfer_ownership_of_registries_to_vault_factory.js
+======================================================
+Delay 1000
+Delay 1000
+Delay 1000
+Delay 1000
+Delay 1000
+Delay 1000
+
+   > Saving migration to chain.
+   -------------------------------------
+   > Total cost:                   0 ETH
+
+
+5_initialize_collateral_split_registry.js
+=========================================
+Delay 1000
+
+   Deploying 'InsurSplit'
+   ----------------------
+   > transaction hash:    0x2ca1e43558a39f5bb61a9fc8c2359a4c7c47b0be037c94c111d079349b3a304f
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x05a01D5c4f16EC843cc7D4cEa56b6495c71a23E4
+   > block number:        24
+   > block timestamp:     1604409768
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             96.8462984
+   > gas used:            948478 (0xe78fe)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.1896956 ETH
+
+Adding split Insur
+Delay 1000
+Added split 0x05a01D5c4f16EC843cc7D4cEa56b6495c71a23E4 as Insur in 0x2b87a2ab55f23b00957d4c448f564386eb5d40ff0487ec1ceb45e9e6e8f3580e
+
+   Deploying 'x5Split'
+   -------------------
+   > transaction hash:    0x21d90c4767064a8e8d1d41d17969e5441b17b527c79a17934574d8a5e143cfce
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x94246E4357b66573baDbDe7FF0b0c8A336f327a8
+   > block number:        26
+   > block timestamp:     1604409770
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             96.646173
+   > gas used:            944590 (0xe69ce)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.188918 ETH
+
+Adding split x5
+Delay 1000
+Added split 0x94246E4357b66573baDbDe7FF0b0c8A336f327a8 as x5 in 0x5d930ce2dd6f38dcc0eeb8dad8094364160d99c6d8e6455cbe63981dd0e8c363
+
+   Deploying 'CallOptionSplit'
+   ---------------------------
+   > transaction hash:    0x2c0e0381842252ad133e747f36fe8cea177341f5d0babcde54cde7eda50391fa
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x96A2eF2E1D608D78A957Bd378C6Ea5AF9aa85d06
+   > block number:        28
+   > block timestamp:     1604409772
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             96.4498266
+   > gas used:            925695 (0xe1fff)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.185139 ETH
+
+Adding split CallOption
+Delay 1000
+Added split 0x96A2eF2E1D608D78A957Bd378C6Ea5AF9aa85d06 as CallOption in 0x26a784393fa0f17019a187d28bf743039e1c19fffa73716256911ed845af8156
+
+   Deploying 'StableSplit'
+   -----------------------
+   > transaction hash:    0x4edd7a21084ab12894d8f7c53ea651172e705271834da74001a3f31c8f9b5fc8
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xfF3076bB34e65EbCd8f71e23F6a48B4C3812E831
+   > block number:        30
+   > block timestamp:     1604409774
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             96.2517294
+   > gas used:            934449 (0xe4231)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.1868898 ETH
+
+Adding split Stab
+Delay 1000
+Added split 0xfF3076bB34e65EbCd8f71e23F6a48B4C3812E831 as Stab in 0xf71be4c231e4cfc5313b842d29daa6712d31b4e5698992aa00798aec8fa6fdbd
+
+   Deploying 'x1Split'
+   -------------------
+   > transaction hash:    0x8482d30ac39d1f9d69c32bacbf40d5168115df419c26b102a538300fb7848640
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x327D51D5967f0511f59B4Cc6D5716fcC17692f01
+   > block number:        32
+   > block timestamp:     1604409775
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             96.0568244
+   > gas used:            918488 (0xe03d8)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.1836976 ETH
+
+Adding split x1
+Delay 1000
+Added split 0x327D51D5967f0511f59B4Cc6D5716fcC17692f01 as x1 in 0x173f19bcc5c062dc71350991dfa2e69b77ba45ab948b86ff36fa9907566c345a
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:             0.93434 ETH
+
+
+6_initialize_oracle_iterator_registry.js
+========================================
+Delay 1000
+
+   Deploying 'ChainlinkOracleIterator'
+   -----------------------------------
+   > transaction hash:    0x745431b1b3730401ea1b9fac18c7f0b4b53441b034d42d800b77e4e9479556d7
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x928065d8283F9BECcE211fBf7Ee367D71277Bad9
+   > block number:        35
+   > block timestamp:     1604409780
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             95.9402128
+   > gas used:            499767 (0x7a037)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0999534 ETH
+
+Adding oracle iterator ChainlinkIterator
+Delay 1000
+Added oracle iterator 0x928065d8283F9BECcE211fBf7Ee367D71277Bad9 as ChainlinkIterator in 0xb468032034681c1e78a6ec6ab29c2e1f0155a9b452bfff2ce321f7136d5edab3
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           0.0999534 ETH
+
+
+7_v121_update_vault_builder.js
+==============================
+Delay 1000
+CONTRACT_ADMIN_ACCOUNT ::  0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+
+   Replacing 'VaultBuilder'
+   ------------------------
+   > transaction hash:    0x3ad5866c9d722326dfe20a82ca8118ec8c411917e84bb3d862e6f61db894a019
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x960C5C95dAd871369b51C453E74126747f2017A1
+   > block number:        38
+   > block timestamp:     1604409784
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             95.198084
+   > gas used:            3627399 (0x375987)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.7254798 ETH
+
+Delay 1000
+Delay 1000
+VaultFactory.setVaultBuilder 0x960C5C95dAd871369b51C453E74126747f2017A1 :: success :: 0x915a537a81f8dc722df1d4adbeb35578d9d29a64e6c933c0b9b699696d58abc4
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           0.7254798 ETH
+
+
+8_v130_update_vault_factory.js
+==============================
+Delay 1000
+CONTRACT_ADMIN_ACCOUNT ::  0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+PROXY_ADMIN_ACCOUNT ::  0xedD5C6983F2E93eFc65E32DDC2A0be54fcD6F5d7
+
+   Replacing 'VaultFactory'
+   ------------------------
+   > transaction hash:    0x3a36a09815cae7fb70245fda221f4cef6b850f67c57a99f7dde4ffff46c1799d
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x8E7f36B62aedF77e3E9318B775fDEA994b8cEfF5
+   > block number:        41
+   > block timestamp:     1604409789
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             94.63686
+   > gas used:            2747702 (0x29ed36)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.5495404 ETH
+
+VaultFactoryProxy.upgradeTo 0x8E7f36B62aedF77e3E9318B775fDEA994b8cEfF5 :: success :: 0xf7dfdbb2ca7957cb69f88346290679e28cfc451871df8ba3c5b35d88bf43ad18
+
+   Replacing 'VaultBuilder'
+   ------------------------
+   > transaction hash:    0x28568597ac843beea11f8776aa93df59000cda9afee7f402dea068efb69978ed
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xde4FbeC30059d68aea796a0F9A60Be2AA805D59f
+   > block number:        43
+   > block timestamp:     1604409790
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             93.9113802
+   > gas used:            3627399 (0x375987)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.7254798 ETH
+
+Delay 1000
+Delay 1000
+VaultFactory.setVaultBuilder 0xde4FbeC30059d68aea796a0F9A60Be2AA805D59f :: success :: 0x9845f5ac2a1ae2d1938a7c12b72beb4b5e2c9e04053afca2314dfd40ae2f1adc
+
+   Replacing 'TokenBuilder'
+   ------------------------
+   > transaction hash:    0x43a5d80f5eaf1e87bc0675b3770e6c35d4f56d525c4453dc82fca33cbaad5dfb
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xAcDeE1741B72E4061e350d97b729bF8EDa16234D
+   > block number:        45
+   > block timestamp:     1604409793
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             93.34413
+   > gas used:            2805099 (0x2acd6b)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.5610198 ETH
+
+Delay 1000
+Delay 1000
+undefined :: success :: 0x830c671134d4cf1e9bf60a6eebea256d108e43bbdfabacb5fbd7de43dfc125ca
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:             1.83604 ETH
+
+
+9_redeploy_oracle_iterator_and_collateral_split_registries.js
+=============================================================
+Delay 1000
+
+   Replacing 'OracleIteratorRegistry'
+   ----------------------------------
+   > transaction hash:    0xf0af5051d4dfc950aa3ea747723300462cc973259d4556dfe113cd266802b7c5
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xCc45A46BC70731B32DE90D287dEDAdf3B9d3D932
+   > block number:        48
+   > block timestamp:     1604409798
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             93.2093908
+   > gas used:            615320 (0x96398)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.123064 ETH
+
+Delay 1000
+OracleIteratorRegistry: 0xCc45A46BC70731B32DE90D287dEDAdf3B9d3D932
+Delay 1000
+OracleIteratorRegistry set
+
+   Replacing 'CollateralSplitRegistry'
+   -----------------------------------
+   > transaction hash:    0xc93cb8657d4eccc4ed6a8e23d7337166553edac0dee28319986848682a0b5f67
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x84fC58CF5a80B1251C2a7b456085Bfa9380FB5C4
+   > block number:        50
+   > block timestamp:     1604409800
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             93.0800918
+   > gas used:            615332 (0x963a4)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.1230664 ETH
+
+Delay 1000
+CollateralSplitRegistry: 0x84fC58CF5a80B1251C2a7b456085Bfa9380FB5C4
+Delay 1000
+CollateralSplitRegistry set
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           0.2461304 ETH
+
+
+10_transfer_ownership_of_new_registries_to_vault_factory.js
+===========================================================
+Delay 1000
+Delay 1000
+Delay 1000
+
+   > Saving migration to chain.
+   -------------------------------------
+   > Total cost:                   0 ETH
+
+
+11_initialize_collateral_split_registry.js
+==========================================
+Delay 1000
+
+   Replacing 'InsurSplit'
+   ----------------------
+   > transaction hash:    0x4f836dcf29f0ac7136c6b7da40f8801a56d5fa2617cbf05f1431388bd69b0101
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x7E9C5f0b3a7FB7DC6dCCA8Bf2b9CE528aE59e71b
+   > block number:        56
+   > block timestamp:     1604409809
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             92.8609734
+   > gas used:            948478 (0xe78fe)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.1896956 ETH
+
+Adding split Insur
+Delay 1000
+Added split 0x7E9C5f0b3a7FB7DC6dCCA8Bf2b9CE528aE59e71b as Insur in 0x5cda85b6b4707f1a63cbf0ccf3be1191493e67dc828b51db075cf4710a393d8b
+
+   Replacing 'x5Split'
+   -------------------
+   > transaction hash:    0x737a5084d714f5a21223bedf9a0abc2e0ac6e8eefe8612318704c89f515b9da1
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x3Fc748BbEDA33e963A855793be4Ba5004adc3550
+   > block number:        58
+   > block timestamp:     1604409810
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             92.660848
+   > gas used:            944590 (0xe69ce)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.188918 ETH
+
+Adding split x5
+Delay 1000
+Added split 0x3Fc748BbEDA33e963A855793be4Ba5004adc3550 as x5 in 0xa4bfdff62808a687f5cd0452ae75049c2547a06cad91ee4dc4b1afc239924d7d
+
+   Replacing 'CallOptionSplit'
+   ---------------------------
+   > transaction hash:    0x8d4bd0ad9407412a95ab1c47abda525566a113ff84fedc72ef010b19903654db
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x6ACF873AE621538e5F2a88D0eE29d72C4467E0E4
+   > block number:        60
+   > block timestamp:     1604409811
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             92.464504
+   > gas used:            925695 (0xe1fff)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.185139 ETH
+
+Adding split CallOption
+Delay 1000
+Added split 0x6ACF873AE621538e5F2a88D0eE29d72C4467E0E4 as CallOption in 0xaa3373a77b9ace14379f1b3cb7ea4cd84ffd1f6644ef80a505b7cec237471464
+
+   Replacing 'StableSplit'
+   -----------------------
+   > transaction hash:    0x0f8e267e070c23a38318af4b137a905ef9185c1d15e6ed68473cb63d2a17d6a2
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x519904b26Df239e74144923020BB7cc1c46815eA
+   > block number:        62
+   > block timestamp:     1604409813
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             92.2664068
+   > gas used:            934449 (0xe4231)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.1868898 ETH
+
+Adding split Stab
+Delay 1000
+Added split 0x519904b26Df239e74144923020BB7cc1c46815eA as Stab in 0x8aaf5401a4e69841c451b29d38d72b42c14e7918947f243472e462ae4c88d0ec
+
+   Replacing 'x1Split'
+   -------------------
+   > transaction hash:    0x8f58ad6a23ff11d135e3af9a96bb06c60b79748538497159d0d1bfe3100093de
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xc553018700e80BE7eC467caa780689e138498E51
+   > block number:        64
+   > block timestamp:     1604409815
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             92.0715018
+   > gas used:            918488 (0xe03d8)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.1836976 ETH
+
+Adding split x1
+Delay 1000
+Added split 0xc553018700e80BE7eC467caa780689e138498E51 as x1 in 0xb639be7418fe8a6dae13c994f94b6388c0cf60ca7f09534865c56288b438f176
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:             0.93434 ETH
+
+
+12_initialize_oracle_iterator_registry.js
+=========================================
+Delay 1000
+
+   Replacing 'ChainlinkOracleIterator'
+   -----------------------------------
+   > transaction hash:    0x4f1b9a58a20fdb1b6792a064f50ab715116b632ebf963f677818c2d9dd05e079
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x76576667E90d99e3e3bE9068272e482c53D4faC0
+   > block number:        67
+   > block timestamp:     1604409818
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             91.9548926
+   > gas used:            499767 (0x7a037)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0999534 ETH
+
+Adding oracle iterator ChainlinkIterator
+Delay 1000
+Added oracle iterator 0x76576667E90d99e3e3bE9068272e482c53D4faC0 as ChainlinkIterator in 0xbba22cfb3655dceb6291ddf034ba579e09d5dce04953f6ca219b9d7c3f2fd880
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           0.0999534 ETH
+
+
+13_v131_redeploy_chainiterator.js
+=================================
+Delay 1000
+
+   Replacing 'OracleIteratorRegistry'
+   ----------------------------------
+   > transaction hash:    0x141a5d9c6185071e2f01a9f5a3e7db71582e53f8e6fea920ff62327d11831667
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x26Ed1B12349784846A48d5B33707Df4Bf91edc17
+   > block number:        70
+   > block timestamp:     1604409821
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             91.8151796
+   > gas used:            615320 (0x96398)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.123064 ETH
+
+Delay 1000
+OracleIteratorRegistry: 0x26Ed1B12349784846A48d5B33707Df4Bf91edc17
+Delay 1000
+OracleIteratorRegistry set
+Delay 1000
+
+   Replacing 'ChainlinkOracleIterator'
+   -----------------------------------
+   > transaction hash:    0xdfa459764817f8b51fb1897b4ad935a0e07dc0c8d70949a08f50a32eff2c834f
+   > Blocks: 0            Seconds: 0
+   > contract address:    0x2726c9E96c062A26FE7cfD6C7FbcC59B4aD4Ac3E
+   > block number:        73
+   > block timestamp:     1604409824
+   > account:             0x27AaA612907C259eC6D7DF5b6c2644EE1cA87825
+   > balance:             91.7028452
+   > gas used:            499767 (0x7a037)
+   > gas price:           200 gwei
+   > value sent:          0 ETH
+   > total cost:          0.0999534 ETH
+
+Adding oracle iterator ChainlinkIterator
+Delay 1000
+Added oracle iterator 0x2726c9E96c062A26FE7cfD6C7FbcC59B4aD4Ac3E as ChainlinkIterator in 0x3061dc9291b766f0f692178f756e26b43e428c768ec7e9e4a696c49f0aad079b
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:           0.2230174 ETH
+
+
+Summary
+=======
+> Total deployments:   32
+> Final cost:          7.9324594 ETH
+
+
+

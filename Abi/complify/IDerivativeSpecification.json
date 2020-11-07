@@ -1,0 +1,2251 @@
+{
+  "contractName": "IDerivativeSpecification",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "isDerivativeSpecification",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "oracleSymbols",
+      "outputs": [
+        {
+          "internalType": "bytes32[]",
+          "name": "",
+          "type": "bytes32[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "oracleIteratorSymbols",
+      "outputs": [
+        {
+          "internalType": "bytes32[]",
+          "name": "",
+          "type": "bytes32[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "collateralTokenSymbol",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "collateralSplitSymbol",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "mintingPeriod",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "livePeriod",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "primaryNominalValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "complementNominalValue",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "authorFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "baseURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "author",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"author\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"authorFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"baseURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"collateralSplitSymbol\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"collateralTokenSymbol\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"complementNominalValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isDerivativeSpecification\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"livePeriod\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"mintingPeriod\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"oracleIteratorSymbols\",\"outputs\":[{\"internalType\":\"bytes32[]\",\"name\":\"\",\"type\":\"bytes32[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"oracleSymbols\",\"outputs\":[{\"internalType\":\"bytes32[]\",\"name\":\"\",\"type\":\"bytes32[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"primaryNominalValue\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Created by the derivative's author and published to the DerivativeSpecificationRegistry\",\"kind\":\"dev\",\"methods\":{\"author()\":{\"details\":\"Used to set and receive author's fee\",\"returns\":{\"_0\":\"address of the author\"}},\"authorFee()\":{\"details\":\"Percentage fee multiplied by 10 ^ 12\",\"returns\":{\"_0\":\"author fee\"}},\"baseURI()\":{\"details\":\"Isn't used directly in the protocol\",\"returns\":{\"_0\":\"URI to the derivative specs\"}},\"collateralSplitSymbol()\":{\"details\":\"Should be resolved through CollateralSplitRegistry contract\",\"returns\":{\"_0\":\"collateral split symbol\"}},\"collateralTokenSymbol()\":{\"details\":\"Should be resolved through CollateralTokenRegistry contract\",\"returns\":{\"_0\":\"collateral token symbol\"}},\"complementNominalValue()\":{\"details\":\"Units of collateral theoretically swappable for 1 unit of complement asset\",\"returns\":{\"_0\":\"complement nominal value\"}},\"isDerivativeSpecification()\":{\"details\":\"Verifies that contract is a derivative specification\",\"returns\":{\"_0\":\"true if contract is a derivative specification\"}},\"livePeriod()\":{\"details\":\"Set in seconds\",\"returns\":{\"_0\":\"live period value\"}},\"mintingPeriod()\":{\"details\":\"Set in seconds\",\"returns\":{\"_0\":\"minting period value\"}},\"name()\":{\"details\":\"Isn't used directly in the protocol\",\"returns\":{\"_0\":\"long name\"}},\"oracleIteratorSymbols()\":{\"details\":\"Should be resolved through OracleIteratorRegistry contract\",\"returns\":{\"_0\":\"oracle iterator symbols\"}},\"oracleSymbols()\":{\"details\":\"Should be resolved through OracleRegistry contract\",\"returns\":{\"_0\":\"oracle symbols\"}},\"primaryNominalValue()\":{\"details\":\"Units of collateral theoretically swappable for 1 unit of primary asset\",\"returns\":{\"_0\":\"primary nominal value\"}},\"symbol()\":{\"details\":\"Should be resolved through DerivativeSpecificationRegistry contract\",\"returns\":{\"_0\":\"derivative specification symbol\"}}},\"title\":\"Derivative Specification interface\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"author()\":{\"notice\":\"Derivative spec author\"},\"authorFee()\":{\"notice\":\"Minting fee rate due to the author of the derivative specification.\"},\"baseURI()\":{\"notice\":\"Optional URI to the derivative specs\"},\"collateralSplitSymbol()\":{\"notice\":\"Mapping from the change in the underlying variable (as defined by the oracle) and the initial collateral split to the final collateral split\"},\"collateralTokenSymbol()\":{\"notice\":\"Type of collateral that users submit to mint the derivative\"},\"complementNominalValue()\":{\"notice\":\"Parameter that determines starting nominal value of complement asset\"},\"isDerivativeSpecification()\":{\"notice\":\"Proof of a derivative specification\"},\"livePeriod()\":{\"notice\":\"Lifecycle parameter that define the length of the derivative's Live period.\"},\"mintingPeriod()\":{\"notice\":\"Lifecycle parameter that define the length of the derivative's Minting period.\"},\"name()\":{\"notice\":\"Return optional long name of the derivative\"},\"oracleIteratorSymbols()\":{\"notice\":\"Algorithm that, for the type of oracle used by the derivative, finds the value closest to a given timestamp\"},\"oracleSymbols()\":{\"notice\":\"Set of oracles that are relied upon to measure changes in the state of the world between the start and the end of the Live period\"},\"primaryNominalValue()\":{\"notice\":\"Parameter that determines starting nominal value of primary asset\"},\"symbol()\":{\"notice\":\"Symbol of the derivative\"}},\"notice\":\"Immutable collection of derivative attributes\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/IDerivativeSpecification.sol\":\"IDerivativeSpecification\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1000000},\"remappings\":[]},\"sources\":{\"/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/IDerivativeSpecification.sol\":{\"keccak256\":\"0x670ed3fc22a9ae80a231b7989017152ebf4ff798fe02aeaba66c6742ff0f286f\",\"license\":\"GNU General Public License v3.0\",\"urls\":[\"bzz-raw://65a13f9b4c9d52686969a14b276e41f96442216829f1024428c52dc74fa6ee1a\",\"dweb:/ipfs/Qmd2UvtRsHFJme8PUQ1XJmShWUWdVRZHQHJvnAaGJR8CkP\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// \"SPDX-License-Identifier: GNU General Public License v3.0\"\n\npragma solidity >=0.4.21 <0.7.0;\n\n/// @title Derivative Specification interface\n/// @notice Immutable collection of derivative attributes\n/// @dev Created by the derivative's author and published to the DerivativeSpecificationRegistry\ninterface IDerivativeSpecification {\n\n    /// @notice Proof of a derivative specification\n    /// @dev Verifies that contract is a derivative specification\n    /// @return true if contract is a derivative specification\n    function isDerivativeSpecification() external pure returns(bool);\n\n    /// @notice Set of oracles that are relied upon to measure changes in the state of the world\n    /// between the start and the end of the Live period\n    /// @dev Should be resolved through OracleRegistry contract\n    /// @return oracle symbols\n    function oracleSymbols() external view returns (bytes32[] memory);\n\n    /// @notice Algorithm that, for the type of oracle used by the derivative,\n    /// finds the value closest to a given timestamp\n    /// @dev Should be resolved through OracleIteratorRegistry contract\n    /// @return oracle iterator symbols\n    function oracleIteratorSymbols() external view returns (bytes32[] memory);\n\n    /// @notice Type of collateral that users submit to mint the derivative\n    /// @dev Should be resolved through CollateralTokenRegistry contract\n    /// @return collateral token symbol\n    function collateralTokenSymbol() external view returns (bytes32);\n\n    /// @notice Mapping from the change in the underlying variable (as defined by the oracle)\n    /// and the initial collateral split to the final collateral split\n    /// @dev Should be resolved through CollateralSplitRegistry contract\n    /// @return collateral split symbol\n    function collateralSplitSymbol() external view returns (bytes32);\n\n    /// @notice Lifecycle parameter that define the length of the derivative's Minting period.\n    /// @dev Set in seconds\n    /// @return minting period value\n    function mintingPeriod() external view returns (uint);\n\n    /// @notice Lifecycle parameter that define the length of the derivative's Live period.\n    /// @dev Set in seconds\n    /// @return live period value\n    function livePeriod() external view returns (uint);\n\n    /// @notice Parameter that determines starting nominal value of primary asset\n    /// @dev Units of collateral theoretically swappable for 1 unit of primary asset\n    /// @return primary nominal value\n    function primaryNominalValue() external view returns (uint);\n\n    /// @notice Parameter that determines starting nominal value of complement asset\n    /// @dev Units of collateral theoretically swappable for 1 unit of complement asset\n    /// @return complement nominal value\n    function complementNominalValue() external view returns (uint);\n\n    /// @notice Minting fee rate due to the author of the derivative specification.\n    /// @dev Percentage fee multiplied by 10 ^ 12\n    /// @return author fee\n    function authorFee() external view returns (uint);\n\n    /// @notice Symbol of the derivative\n    /// @dev Should be resolved through DerivativeSpecificationRegistry contract\n    /// @return derivative specification symbol\n    function symbol() external view returns (string memory);\n\n    /// @notice Return optional long name of the derivative\n    /// @dev Isn't used directly in the protocol\n    /// @return long name\n    function name() external view returns (string memory);\n\n    /// @notice Optional URI to the derivative specs\n    /// @dev Isn't used directly in the protocol\n    /// @return URI to the derivative specs\n    function baseURI() external view returns (string memory);\n\n    /// @notice Derivative spec author\n    /// @dev Used to set and receive author's fee\n    /// @return address of the author\n    function author() external view returns (address);\n}\n",
+  "sourcePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/IDerivativeSpecification.sol",
+  "ast": {
+    "absolutePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/IDerivativeSpecification.sol",
+    "exportedSymbols": {
+      "IDerivativeSpecification": [
+        389
+      ]
+    },
+    "id": 390,
+    "license": "GNU General Public License v3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 301,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "63:32:3"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 302,
+          "nodeType": "StructuredDocumentation",
+          "src": "97:201:3",
+          "text": "@title Derivative Specification interface\n @notice Immutable collection of derivative attributes\n @dev Created by the derivative's author and published to the DerivativeSpecificationRegistry"
+        },
+        "fullyImplemented": false,
+        "id": 389,
+        "linearizedBaseContracts": [
+          389
+        ],
+        "name": "IDerivativeSpecification",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 303,
+              "nodeType": "StructuredDocumentation",
+              "src": "340:176:3",
+              "text": "@notice Proof of a derivative specification\n @dev Verifies that contract is a derivative specification\n @return true if contract is a derivative specification"
+            },
+            "functionSelector": "6e1622f2",
+            "id": 308,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isDerivativeSpecification",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 304,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "555:2:3"
+            },
+            "returnParameters": {
+              "id": 307,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 306,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 308,
+                  "src": "580:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 305,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "580:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "579:6:3"
+            },
+            "scope": 389,
+            "src": "521:65:3",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 309,
+              "nodeType": "StructuredDocumentation",
+              "src": "592:244:3",
+              "text": "@notice Set of oracles that are relied upon to measure changes in the state of the world\n between the start and the end of the Live period\n @dev Should be resolved through OracleRegistry contract\n @return oracle symbols"
+            },
+            "functionSelector": "e9a17e3b",
+            "id": 315,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "oracleSymbols",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 310,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "863:2:3"
+            },
+            "returnParameters": {
+              "id": 314,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 313,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 315,
+                  "src": "889:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 311,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "889:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 312,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "889:9:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "888:18:3"
+            },
+            "scope": 389,
+            "src": "841:66:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 316,
+              "nodeType": "StructuredDocumentation",
+              "src": "913:239:3",
+              "text": "@notice Algorithm that, for the type of oracle used by the derivative,\n finds the value closest to a given timestamp\n @dev Should be resolved through OracleIteratorRegistry contract\n @return oracle iterator symbols"
+            },
+            "functionSelector": "35e8376a",
+            "id": 322,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "oracleIteratorSymbols",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 317,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1187:2:3"
+            },
+            "returnParameters": {
+              "id": 321,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 320,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 322,
+                  "src": "1213:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 318,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1213:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 319,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1213:9:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1212:18:3"
+            },
+            "scope": 389,
+            "src": "1157:74:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 323,
+              "nodeType": "StructuredDocumentation",
+              "src": "1237:184:3",
+              "text": "@notice Type of collateral that users submit to mint the derivative\n @dev Should be resolved through CollateralTokenRegistry contract\n @return collateral token symbol"
+            },
+            "functionSelector": "efeb3f7b",
+            "id": 328,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "collateralTokenSymbol",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 324,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1456:2:3"
+            },
+            "returnParameters": {
+              "id": 327,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 326,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 328,
+                  "src": "1482:7:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 325,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1482:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1481:9:3"
+            },
+            "scope": 389,
+            "src": "1426:65:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 329,
+              "nodeType": "StructuredDocumentation",
+              "src": "1497:273:3",
+              "text": "@notice Mapping from the change in the underlying variable (as defined by the oracle)\n and the initial collateral split to the final collateral split\n @dev Should be resolved through CollateralSplitRegistry contract\n @return collateral split symbol"
+            },
+            "functionSelector": "f27b9b9f",
+            "id": 334,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "collateralSplitSymbol",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 330,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1805:2:3"
+            },
+            "returnParameters": {
+              "id": 333,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 332,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 334,
+                  "src": "1831:7:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 331,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1831:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1830:9:3"
+            },
+            "scope": 389,
+            "src": "1775:65:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 335,
+              "nodeType": "StructuredDocumentation",
+              "src": "1846:155:3",
+              "text": "@notice Lifecycle parameter that define the length of the derivative's Minting period.\n @dev Set in seconds\n @return minting period value"
+            },
+            "functionSelector": "739ec292",
+            "id": 340,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mintingPeriod",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 336,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2028:2:3"
+            },
+            "returnParameters": {
+              "id": 339,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 338,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 340,
+                  "src": "2054:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 337,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2054:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2053:6:3"
+            },
+            "scope": 389,
+            "src": "2006:54:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 341,
+              "nodeType": "StructuredDocumentation",
+              "src": "2066:149:3",
+              "text": "@notice Lifecycle parameter that define the length of the derivative's Live period.\n @dev Set in seconds\n @return live period value"
+            },
+            "functionSelector": "f6869803",
+            "id": 346,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "livePeriod",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 342,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2239:2:3"
+            },
+            "returnParameters": {
+              "id": 345,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 344,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 346,
+                  "src": "2265:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 343,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2265:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2264:6:3"
+            },
+            "scope": 389,
+            "src": "2220:51:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 347,
+              "nodeType": "StructuredDocumentation",
+              "src": "2277:200:3",
+              "text": "@notice Parameter that determines starting nominal value of primary asset\n @dev Units of collateral theoretically swappable for 1 unit of primary asset\n @return primary nominal value"
+            },
+            "functionSelector": "c6bb30e2",
+            "id": 352,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "primaryNominalValue",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 348,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2510:2:3"
+            },
+            "returnParameters": {
+              "id": 351,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 350,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 352,
+                  "src": "2536:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 349,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2536:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2535:6:3"
+            },
+            "scope": 389,
+            "src": "2482:60:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 353,
+              "nodeType": "StructuredDocumentation",
+              "src": "2548:209:3",
+              "text": "@notice Parameter that determines starting nominal value of complement asset\n @dev Units of collateral theoretically swappable for 1 unit of complement asset\n @return complement nominal value"
+            },
+            "functionSelector": "ab56c592",
+            "id": 358,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "complementNominalValue",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 354,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2793:2:3"
+            },
+            "returnParameters": {
+              "id": 357,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 356,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 358,
+                  "src": "2819:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 355,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2819:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2818:6:3"
+            },
+            "scope": 389,
+            "src": "2762:63:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 359,
+              "nodeType": "StructuredDocumentation",
+              "src": "2831:156:3",
+              "text": "@notice Minting fee rate due to the author of the derivative specification.\n @dev Percentage fee multiplied by 10 ^ 12\n @return author fee"
+            },
+            "functionSelector": "de47f50b",
+            "id": 364,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "authorFee",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 360,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3010:2:3"
+            },
+            "returnParameters": {
+              "id": 363,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 362,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 364,
+                  "src": "3036:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 361,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3036:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3035:6:3"
+            },
+            "scope": 389,
+            "src": "2992:50:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 365,
+              "nodeType": "StructuredDocumentation",
+              "src": "3048:165:3",
+              "text": "@notice Symbol of the derivative\n @dev Should be resolved through DerivativeSpecificationRegistry contract\n @return derivative specification symbol"
+            },
+            "functionSelector": "95d89b41",
+            "id": 370,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "symbol",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 366,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3233:2:3"
+            },
+            "returnParameters": {
+              "id": 369,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 368,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 370,
+                  "src": "3259:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 367,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3259:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3258:15:3"
+            },
+            "scope": 389,
+            "src": "3218:56:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 371,
+              "nodeType": "StructuredDocumentation",
+              "src": "3280:130:3",
+              "text": "@notice Return optional long name of the derivative\n @dev Isn't used directly in the protocol\n @return long name"
+            },
+            "functionSelector": "06fdde03",
+            "id": 376,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "name",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 372,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3428:2:3"
+            },
+            "returnParameters": {
+              "id": 375,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 374,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 376,
+                  "src": "3454:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 373,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3454:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3453:15:3"
+            },
+            "scope": 389,
+            "src": "3415:54:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 377,
+              "nodeType": "StructuredDocumentation",
+              "src": "3475:141:3",
+              "text": "@notice Optional URI to the derivative specs\n @dev Isn't used directly in the protocol\n @return URI to the derivative specs"
+            },
+            "functionSelector": "6c0360eb",
+            "id": 382,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "baseURI",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 378,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3637:2:3"
+            },
+            "returnParameters": {
+              "id": 381,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 380,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 382,
+                  "src": "3663:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 379,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3663:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3662:15:3"
+            },
+            "scope": 389,
+            "src": "3621:57:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 383,
+              "nodeType": "StructuredDocumentation",
+              "src": "3684:122:3",
+              "text": "@notice Derivative spec author\n @dev Used to set and receive author's fee\n @return address of the author"
+            },
+            "functionSelector": "a6c3e6b9",
+            "id": 388,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "author",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 384,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3826:2:3"
+            },
+            "returnParameters": {
+              "id": 387,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 386,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 388,
+                  "src": "3852:7:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 385,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3852:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3851:9:3"
+            },
+            "scope": 389,
+            "src": "3811:50:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 390,
+        "src": "298:3565:3"
+      }
+    ],
+    "src": "63:3801:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/IDerivativeSpecification.sol",
+    "exportedSymbols": {
+      "IDerivativeSpecification": [
+        389
+      ]
+    },
+    "id": 390,
+    "license": "GNU General Public License v3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 301,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "63:32:3"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 302,
+          "nodeType": "StructuredDocumentation",
+          "src": "97:201:3",
+          "text": "@title Derivative Specification interface\n @notice Immutable collection of derivative attributes\n @dev Created by the derivative's author and published to the DerivativeSpecificationRegistry"
+        },
+        "fullyImplemented": false,
+        "id": 389,
+        "linearizedBaseContracts": [
+          389
+        ],
+        "name": "IDerivativeSpecification",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 303,
+              "nodeType": "StructuredDocumentation",
+              "src": "340:176:3",
+              "text": "@notice Proof of a derivative specification\n @dev Verifies that contract is a derivative specification\n @return true if contract is a derivative specification"
+            },
+            "functionSelector": "6e1622f2",
+            "id": 308,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isDerivativeSpecification",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 304,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "555:2:3"
+            },
+            "returnParameters": {
+              "id": 307,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 306,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 308,
+                  "src": "580:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 305,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "580:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "579:6:3"
+            },
+            "scope": 389,
+            "src": "521:65:3",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 309,
+              "nodeType": "StructuredDocumentation",
+              "src": "592:244:3",
+              "text": "@notice Set of oracles that are relied upon to measure changes in the state of the world\n between the start and the end of the Live period\n @dev Should be resolved through OracleRegistry contract\n @return oracle symbols"
+            },
+            "functionSelector": "e9a17e3b",
+            "id": 315,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "oracleSymbols",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 310,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "863:2:3"
+            },
+            "returnParameters": {
+              "id": 314,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 313,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 315,
+                  "src": "889:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 311,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "889:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 312,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "889:9:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "888:18:3"
+            },
+            "scope": 389,
+            "src": "841:66:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 316,
+              "nodeType": "StructuredDocumentation",
+              "src": "913:239:3",
+              "text": "@notice Algorithm that, for the type of oracle used by the derivative,\n finds the value closest to a given timestamp\n @dev Should be resolved through OracleIteratorRegistry contract\n @return oracle iterator symbols"
+            },
+            "functionSelector": "35e8376a",
+            "id": 322,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "oracleIteratorSymbols",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 317,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1187:2:3"
+            },
+            "returnParameters": {
+              "id": 321,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 320,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 322,
+                  "src": "1213:16:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bytes32_$dyn_memory_ptr",
+                    "typeString": "bytes32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 318,
+                      "name": "bytes32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1213:7:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "id": 319,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1213:9:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bytes32_$dyn_storage_ptr",
+                      "typeString": "bytes32[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1212:18:3"
+            },
+            "scope": 389,
+            "src": "1157:74:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 323,
+              "nodeType": "StructuredDocumentation",
+              "src": "1237:184:3",
+              "text": "@notice Type of collateral that users submit to mint the derivative\n @dev Should be resolved through CollateralTokenRegistry contract\n @return collateral token symbol"
+            },
+            "functionSelector": "efeb3f7b",
+            "id": 328,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "collateralTokenSymbol",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 324,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1456:2:3"
+            },
+            "returnParameters": {
+              "id": 327,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 326,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 328,
+                  "src": "1482:7:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 325,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1482:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1481:9:3"
+            },
+            "scope": 389,
+            "src": "1426:65:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 329,
+              "nodeType": "StructuredDocumentation",
+              "src": "1497:273:3",
+              "text": "@notice Mapping from the change in the underlying variable (as defined by the oracle)\n and the initial collateral split to the final collateral split\n @dev Should be resolved through CollateralSplitRegistry contract\n @return collateral split symbol"
+            },
+            "functionSelector": "f27b9b9f",
+            "id": 334,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "collateralSplitSymbol",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 330,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1805:2:3"
+            },
+            "returnParameters": {
+              "id": 333,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 332,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 334,
+                  "src": "1831:7:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 331,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1831:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1830:9:3"
+            },
+            "scope": 389,
+            "src": "1775:65:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 335,
+              "nodeType": "StructuredDocumentation",
+              "src": "1846:155:3",
+              "text": "@notice Lifecycle parameter that define the length of the derivative's Minting period.\n @dev Set in seconds\n @return minting period value"
+            },
+            "functionSelector": "739ec292",
+            "id": 340,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mintingPeriod",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 336,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2028:2:3"
+            },
+            "returnParameters": {
+              "id": 339,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 338,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 340,
+                  "src": "2054:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 337,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2054:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2053:6:3"
+            },
+            "scope": 389,
+            "src": "2006:54:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 341,
+              "nodeType": "StructuredDocumentation",
+              "src": "2066:149:3",
+              "text": "@notice Lifecycle parameter that define the length of the derivative's Live period.\n @dev Set in seconds\n @return live period value"
+            },
+            "functionSelector": "f6869803",
+            "id": 346,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "livePeriod",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 342,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2239:2:3"
+            },
+            "returnParameters": {
+              "id": 345,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 344,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 346,
+                  "src": "2265:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 343,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2265:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2264:6:3"
+            },
+            "scope": 389,
+            "src": "2220:51:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 347,
+              "nodeType": "StructuredDocumentation",
+              "src": "2277:200:3",
+              "text": "@notice Parameter that determines starting nominal value of primary asset\n @dev Units of collateral theoretically swappable for 1 unit of primary asset\n @return primary nominal value"
+            },
+            "functionSelector": "c6bb30e2",
+            "id": 352,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "primaryNominalValue",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 348,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2510:2:3"
+            },
+            "returnParameters": {
+              "id": 351,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 350,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 352,
+                  "src": "2536:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 349,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2536:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2535:6:3"
+            },
+            "scope": 389,
+            "src": "2482:60:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 353,
+              "nodeType": "StructuredDocumentation",
+              "src": "2548:209:3",
+              "text": "@notice Parameter that determines starting nominal value of complement asset\n @dev Units of collateral theoretically swappable for 1 unit of complement asset\n @return complement nominal value"
+            },
+            "functionSelector": "ab56c592",
+            "id": 358,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "complementNominalValue",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 354,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2793:2:3"
+            },
+            "returnParameters": {
+              "id": 357,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 356,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 358,
+                  "src": "2819:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 355,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2819:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2818:6:3"
+            },
+            "scope": 389,
+            "src": "2762:63:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 359,
+              "nodeType": "StructuredDocumentation",
+              "src": "2831:156:3",
+              "text": "@notice Minting fee rate due to the author of the derivative specification.\n @dev Percentage fee multiplied by 10 ^ 12\n @return author fee"
+            },
+            "functionSelector": "de47f50b",
+            "id": 364,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "authorFee",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 360,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3010:2:3"
+            },
+            "returnParameters": {
+              "id": 363,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 362,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 364,
+                  "src": "3036:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 361,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3036:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3035:6:3"
+            },
+            "scope": 389,
+            "src": "2992:50:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 365,
+              "nodeType": "StructuredDocumentation",
+              "src": "3048:165:3",
+              "text": "@notice Symbol of the derivative\n @dev Should be resolved through DerivativeSpecificationRegistry contract\n @return derivative specification symbol"
+            },
+            "functionSelector": "95d89b41",
+            "id": 370,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "symbol",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 366,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3233:2:3"
+            },
+            "returnParameters": {
+              "id": 369,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 368,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 370,
+                  "src": "3259:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 367,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3259:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3258:15:3"
+            },
+            "scope": 389,
+            "src": "3218:56:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 371,
+              "nodeType": "StructuredDocumentation",
+              "src": "3280:130:3",
+              "text": "@notice Return optional long name of the derivative\n @dev Isn't used directly in the protocol\n @return long name"
+            },
+            "functionSelector": "06fdde03",
+            "id": 376,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "name",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 372,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3428:2:3"
+            },
+            "returnParameters": {
+              "id": 375,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 374,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 376,
+                  "src": "3454:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 373,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3454:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3453:15:3"
+            },
+            "scope": 389,
+            "src": "3415:54:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 377,
+              "nodeType": "StructuredDocumentation",
+              "src": "3475:141:3",
+              "text": "@notice Optional URI to the derivative specs\n @dev Isn't used directly in the protocol\n @return URI to the derivative specs"
+            },
+            "functionSelector": "6c0360eb",
+            "id": 382,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "baseURI",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 378,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3637:2:3"
+            },
+            "returnParameters": {
+              "id": 381,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 380,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 382,
+                  "src": "3663:13:3",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 379,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3663:6:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3662:15:3"
+            },
+            "scope": 389,
+            "src": "3621:57:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 383,
+              "nodeType": "StructuredDocumentation",
+              "src": "3684:122:3",
+              "text": "@notice Derivative spec author\n @dev Used to set and receive author's fee\n @return address of the author"
+            },
+            "functionSelector": "a6c3e6b9",
+            "id": 388,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "author",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 384,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3826:2:3"
+            },
+            "returnParameters": {
+              "id": 387,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 386,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 388,
+                  "src": "3852:7:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 385,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3852:7:3",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3851:9:3"
+            },
+            "scope": 389,
+            "src": "3811:50:3",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 390,
+        "src": "298:3565:3"
+      }
+    ],
+    "src": "63:3801:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-11-03T13:08:28.250Z",
+  "devdoc": {
+    "details": "Created by the derivative's author and published to the DerivativeSpecificationRegistry",
+    "kind": "dev",
+    "methods": {
+      "author()": {
+        "details": "Used to set and receive author's fee",
+        "returns": {
+          "_0": "address of the author"
+        }
+      },
+      "authorFee()": {
+        "details": "Percentage fee multiplied by 10 ^ 12",
+        "returns": {
+          "_0": "author fee"
+        }
+      },
+      "baseURI()": {
+        "details": "Isn't used directly in the protocol",
+        "returns": {
+          "_0": "URI to the derivative specs"
+        }
+      },
+      "collateralSplitSymbol()": {
+        "details": "Should be resolved through CollateralSplitRegistry contract",
+        "returns": {
+          "_0": "collateral split symbol"
+        }
+      },
+      "collateralTokenSymbol()": {
+        "details": "Should be resolved through CollateralTokenRegistry contract",
+        "returns": {
+          "_0": "collateral token symbol"
+        }
+      },
+      "complementNominalValue()": {
+        "details": "Units of collateral theoretically swappable for 1 unit of complement asset",
+        "returns": {
+          "_0": "complement nominal value"
+        }
+      },
+      "isDerivativeSpecification()": {
+        "details": "Verifies that contract is a derivative specification",
+        "returns": {
+          "_0": "true if contract is a derivative specification"
+        }
+      },
+      "livePeriod()": {
+        "details": "Set in seconds",
+        "returns": {
+          "_0": "live period value"
+        }
+      },
+      "mintingPeriod()": {
+        "details": "Set in seconds",
+        "returns": {
+          "_0": "minting period value"
+        }
+      },
+      "name()": {
+        "details": "Isn't used directly in the protocol",
+        "returns": {
+          "_0": "long name"
+        }
+      },
+      "oracleIteratorSymbols()": {
+        "details": "Should be resolved through OracleIteratorRegistry contract",
+        "returns": {
+          "_0": "oracle iterator symbols"
+        }
+      },
+      "oracleSymbols()": {
+        "details": "Should be resolved through OracleRegistry contract",
+        "returns": {
+          "_0": "oracle symbols"
+        }
+      },
+      "primaryNominalValue()": {
+        "details": "Units of collateral theoretically swappable for 1 unit of primary asset",
+        "returns": {
+          "_0": "primary nominal value"
+        }
+      },
+      "symbol()": {
+        "details": "Should be resolved through DerivativeSpecificationRegistry contract",
+        "returns": {
+          "_0": "derivative specification symbol"
+        }
+      }
+    },
+    "title": "Derivative Specification interface",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "author()": {
+        "notice": "Derivative spec author"
+      },
+      "authorFee()": {
+        "notice": "Minting fee rate due to the author of the derivative specification."
+      },
+      "baseURI()": {
+        "notice": "Optional URI to the derivative specs"
+      },
+      "collateralSplitSymbol()": {
+        "notice": "Mapping from the change in the underlying variable (as defined by the oracle) and the initial collateral split to the final collateral split"
+      },
+      "collateralTokenSymbol()": {
+        "notice": "Type of collateral that users submit to mint the derivative"
+      },
+      "complementNominalValue()": {
+        "notice": "Parameter that determines starting nominal value of complement asset"
+      },
+      "isDerivativeSpecification()": {
+        "notice": "Proof of a derivative specification"
+      },
+      "livePeriod()": {
+        "notice": "Lifecycle parameter that define the length of the derivative's Live period."
+      },
+      "mintingPeriod()": {
+        "notice": "Lifecycle parameter that define the length of the derivative's Minting period."
+      },
+      "name()": {
+        "notice": "Return optional long name of the derivative"
+      },
+      "oracleIteratorSymbols()": {
+        "notice": "Algorithm that, for the type of oracle used by the derivative, finds the value closest to a given timestamp"
+      },
+      "oracleSymbols()": {
+        "notice": "Set of oracles that are relied upon to measure changes in the state of the world between the start and the end of the Live period"
+      },
+      "primaryNominalValue()": {
+        "notice": "Parameter that determines starting nominal value of primary asset"
+      },
+      "symbol()": {
+        "notice": "Symbol of the derivative"
+      }
+    },
+    "notice": "Immutable collection of derivative attributes",
+    "version": 1
+  }
+}

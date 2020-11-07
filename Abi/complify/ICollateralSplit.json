@@ -1,0 +1,1194 @@
+{
+  "contractName": "ICollateralSplit",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "isCollateralSplit",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "_oracles",
+          "type": "address[]"
+        },
+        {
+          "internalType": "address[]",
+          "name": "_oracleIterators",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_liveTime",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_settleTime",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_underlyingStartRoundHints",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_underlyingEndRoundHints",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "split",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_split",
+          "type": "uint256"
+        },
+        {
+          "internalType": "int256[]",
+          "name": "_underlyingStarts",
+          "type": "int256[]"
+        },
+        {
+          "internalType": "int256[]",
+          "name": "_underlyingEnds",
+          "type": "int256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"isCollateralSplit\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"_oracles\",\"type\":\"address[]\"},{\"internalType\":\"address[]\",\"name\":\"_oracleIterators\",\"type\":\"address[]\"},{\"internalType\":\"uint256\",\"name\":\"_liveTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_settleTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256[]\",\"name\":\"_underlyingStartRoundHints\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"_underlyingEndRoundHints\",\"type\":\"uint256[]\"}],\"name\":\"split\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_split\",\"type\":\"uint256\"},{\"internalType\":\"int256[]\",\"name\":\"_underlyingStarts\",\"type\":\"int256[]\"},{\"internalType\":\"int256[]\",\"name\":\"_underlyingEnds\",\"type\":\"int256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Created independently from specification and published to the CollateralSplitRegistry\",\"kind\":\"dev\",\"methods\":{\"isCollateralSplit()\":{\"details\":\"Verifies that contract is a collateral split contract\",\"returns\":{\"_0\":\"true if contract is a collateral split contract\"}},\"split(address[],address[],uint256,uint256,uint256[],uint256[])\":{\"details\":\"Returns ranged value between 0 and 1 multiplied by 10 ^ 12\",\"params\":{\"_underlyingEndRoundHints\":\"specify for each oracle round of the end of Live period\",\"_underlyingStartRoundHints\":\"specify for each oracle round of the start of Live period\"},\"returns\":{\"_split\":\"primary asset class' share of collateral at settlement\",\"_underlyingEnds\":\"underlying values in the end of Live period\",\"_underlyingStarts\":\"underlying values in the start of Live period\"}},\"symbol()\":{\"details\":\"Should be resolved through CollateralSplitRegistry contract\",\"returns\":{\"_0\":\"collateral split specification symbol\"}}},\"title\":\"Collateral Split interface\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"isCollateralSplit()\":{\"notice\":\"Proof of collateral split contract\"},\"split(address[],address[],uint256,uint256,uint256[],uint256[])\":{\"notice\":\"Calcs primary asset class' share of collateral at settlement.\"},\"symbol()\":{\"notice\":\"Symbol of the collateral split\"}},\"notice\":\"Contains mathematical functions used to calculate relative claim on collateral of primary and complement assets after settlement.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/collateralSplits/ICollateralSplit.sol\":\"ICollateralSplit\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1000000},\"remappings\":[]},\"sources\":{\"/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/collateralSplits/ICollateralSplit.sol\":{\"keccak256\":\"0x9eceee71e142cd04b71813212f73781f0b52853712fee77563a911b698e6deed\",\"license\":\"GNU General Public License v3.0\",\"urls\":[\"bzz-raw://4a204ebef4440df972a5b987b3aefa7c995989a62eed7a8bc0a959fb0122ccd1\",\"dweb:/ipfs/QmbjQfLBtXp2gr48GvUskztskmP9B69WKrSqiaM5D71FjQ\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// \"SPDX-License-Identifier: GNU General Public License v3.0\"\n\npragma solidity 0.6.12;\n\n/// @title Collateral Split interface\n/// @notice Contains mathematical functions used to calculate relative claim\n/// on collateral of primary and complement assets after settlement.\n/// @dev Created independently from specification and published to the CollateralSplitRegistry\ninterface ICollateralSplit {\n\n    /// @notice Proof of collateral split contract\n    /// @dev Verifies that contract is a collateral split contract\n    /// @return true if contract is a collateral split contract\n    function isCollateralSplit() external pure returns(bool);\n\n    /// @notice Symbol of the collateral split\n    /// @dev Should be resolved through CollateralSplitRegistry contract\n    /// @return collateral split specification symbol\n    function symbol() external pure returns (string memory);\n\n    /// @notice Calcs primary asset class' share of collateral at settlement.\n    /// @dev Returns ranged value between 0 and 1 multiplied by 10 ^ 12\n    /// @param _underlyingStartRoundHints specify for each oracle round of the start of Live period\n    /// @param _underlyingEndRoundHints specify for each oracle round of the end of Live period\n    /// @return _split primary asset class' share of collateral at settlement\n    /// @return _underlyingStarts underlying values in the start of Live period\n    /// @return _underlyingEnds underlying values in the end of Live period\n    function split(\n        address[] memory _oracles,\n        address[] memory _oracleIterators,\n        uint _liveTime,\n        uint _settleTime,\n        uint[] memory _underlyingStartRoundHints,\n        uint[] memory _underlyingEndRoundHints)\n    external view returns(uint _split, int[] memory _underlyingStarts, int[] memory _underlyingEnds);\n}\n",
+  "sourcePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/collateralSplits/ICollateralSplit.sol",
+  "ast": {
+    "absolutePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/collateralSplits/ICollateralSplit.sol",
+    "exportedSymbols": {
+      "ICollateralSplit": [
+        2768
+      ]
+    },
+    "id": 2769,
+    "license": "GNU General Public License v3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2726,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "63:23:14"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 2727,
+          "nodeType": "StructuredDocumentation",
+          "src": "88:279:14",
+          "text": "@title Collateral Split interface\n @notice Contains mathematical functions used to calculate relative claim\n on collateral of primary and complement assets after settlement.\n @dev Created independently from specification and published to the CollateralSplitRegistry"
+        },
+        "fullyImplemented": false,
+        "id": 2768,
+        "linearizedBaseContracts": [
+          2768
+        ],
+        "name": "ICollateralSplit",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 2728,
+              "nodeType": "StructuredDocumentation",
+              "src": "401:177:14",
+              "text": "@notice Proof of collateral split contract\n @dev Verifies that contract is a collateral split contract\n @return true if contract is a collateral split contract"
+            },
+            "functionSelector": "b7580bc3",
+            "id": 2733,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isCollateralSplit",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2729,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "609:2:14"
+            },
+            "returnParameters": {
+              "id": 2732,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2731,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2733,
+                  "src": "634:4:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2730,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "634:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "633:6:14"
+            },
+            "scope": 2768,
+            "src": "583:57:14",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 2734,
+              "nodeType": "StructuredDocumentation",
+              "src": "646:169:14",
+              "text": "@notice Symbol of the collateral split\n @dev Should be resolved through CollateralSplitRegistry contract\n @return collateral split specification symbol"
+            },
+            "functionSelector": "95d89b41",
+            "id": 2739,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "symbol",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2735,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "835:2:14"
+            },
+            "returnParameters": {
+              "id": 2738,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2737,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2739,
+                  "src": "861:13:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2736,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "861:6:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "860:15:14"
+            },
+            "scope": 2768,
+            "src": "820:56:14",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 2740,
+              "nodeType": "StructuredDocumentation",
+              "src": "882:575:14",
+              "text": "@notice Calcs primary asset class' share of collateral at settlement.\n @dev Returns ranged value between 0 and 1 multiplied by 10 ^ 12\n @param _underlyingStartRoundHints specify for each oracle round of the start of Live period\n @param _underlyingEndRoundHints specify for each oracle round of the end of Live period\n @return _split primary asset class' share of collateral at settlement\n @return _underlyingStarts underlying values in the start of Live period\n @return _underlyingEnds underlying values in the end of Live period"
+            },
+            "functionSelector": "bb188507",
+            "id": 2767,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "split",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2757,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2743,
+                  "mutability": "mutable",
+                  "name": "_oracles",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2767,
+                  "src": "1486:25:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2741,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1486:7:14",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 2742,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1486:9:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2746,
+                  "mutability": "mutable",
+                  "name": "_oracleIterators",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2767,
+                  "src": "1521:33:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2744,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1521:7:14",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 2745,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1521:9:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2748,
+                  "mutability": "mutable",
+                  "name": "_liveTime",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2767,
+                  "src": "1564:14:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2747,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1564:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2750,
+                  "mutability": "mutable",
+                  "name": "_settleTime",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2767,
+                  "src": "1588:16:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2749,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1588:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2753,
+                  "mutability": "mutable",
+                  "name": "_underlyingStartRoundHints",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2767,
+                  "src": "1614:40:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2751,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1614:4:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 2752,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1614:6:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2756,
+                  "mutability": "mutable",
+                  "name": "_underlyingEndRoundHints",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2767,
+                  "src": "1664:38:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2754,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1664:4:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 2755,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1664:6:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1476:227:14"
+            },
+            "returnParameters": {
+              "id": 2766,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2759,
+                  "mutability": "mutable",
+                  "name": "_split",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2767,
+                  "src": "1730:11:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2758,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1730:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2762,
+                  "mutability": "mutable",
+                  "name": "_underlyingStarts",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2767,
+                  "src": "1743:30:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_int256_$dyn_memory_ptr",
+                    "typeString": "int256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2760,
+                      "name": "int",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1743:3:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "id": 2761,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1743:5:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_int256_$dyn_storage_ptr",
+                      "typeString": "int256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2765,
+                  "mutability": "mutable",
+                  "name": "_underlyingEnds",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2767,
+                  "src": "1775:28:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_int256_$dyn_memory_ptr",
+                    "typeString": "int256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2763,
+                      "name": "int",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1775:3:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "id": 2764,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1775:5:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_int256_$dyn_storage_ptr",
+                      "typeString": "int256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1729:75:14"
+            },
+            "scope": 2768,
+            "src": "1462:343:14",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2769,
+        "src": "367:1440:14"
+      }
+    ],
+    "src": "63:1745:14"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/collateralSplits/ICollateralSplit.sol",
+    "exportedSymbols": {
+      "ICollateralSplit": [
+        2768
+      ]
+    },
+    "id": 2769,
+    "license": "GNU General Public License v3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2726,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "63:23:14"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 2727,
+          "nodeType": "StructuredDocumentation",
+          "src": "88:279:14",
+          "text": "@title Collateral Split interface\n @notice Contains mathematical functions used to calculate relative claim\n on collateral of primary and complement assets after settlement.\n @dev Created independently from specification and published to the CollateralSplitRegistry"
+        },
+        "fullyImplemented": false,
+        "id": 2768,
+        "linearizedBaseContracts": [
+          2768
+        ],
+        "name": "ICollateralSplit",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 2728,
+              "nodeType": "StructuredDocumentation",
+              "src": "401:177:14",
+              "text": "@notice Proof of collateral split contract\n @dev Verifies that contract is a collateral split contract\n @return true if contract is a collateral split contract"
+            },
+            "functionSelector": "b7580bc3",
+            "id": 2733,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isCollateralSplit",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2729,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "609:2:14"
+            },
+            "returnParameters": {
+              "id": 2732,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2731,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2733,
+                  "src": "634:4:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 2730,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "634:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "633:6:14"
+            },
+            "scope": 2768,
+            "src": "583:57:14",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 2734,
+              "nodeType": "StructuredDocumentation",
+              "src": "646:169:14",
+              "text": "@notice Symbol of the collateral split\n @dev Should be resolved through CollateralSplitRegistry contract\n @return collateral split specification symbol"
+            },
+            "functionSelector": "95d89b41",
+            "id": 2739,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "symbol",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2735,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "835:2:14"
+            },
+            "returnParameters": {
+              "id": 2738,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2737,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2739,
+                  "src": "861:13:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2736,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "861:6:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "860:15:14"
+            },
+            "scope": 2768,
+            "src": "820:56:14",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 2740,
+              "nodeType": "StructuredDocumentation",
+              "src": "882:575:14",
+              "text": "@notice Calcs primary asset class' share of collateral at settlement.\n @dev Returns ranged value between 0 and 1 multiplied by 10 ^ 12\n @param _underlyingStartRoundHints specify for each oracle round of the start of Live period\n @param _underlyingEndRoundHints specify for each oracle round of the end of Live period\n @return _split primary asset class' share of collateral at settlement\n @return _underlyingStarts underlying values in the start of Live period\n @return _underlyingEnds underlying values in the end of Live period"
+            },
+            "functionSelector": "bb188507",
+            "id": 2767,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "split",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 2757,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2743,
+                  "mutability": "mutable",
+                  "name": "_oracles",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2767,
+                  "src": "1486:25:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2741,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1486:7:14",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 2742,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1486:9:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2746,
+                  "mutability": "mutable",
+                  "name": "_oracleIterators",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2767,
+                  "src": "1521:33:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2744,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1521:7:14",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 2745,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1521:9:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2748,
+                  "mutability": "mutable",
+                  "name": "_liveTime",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2767,
+                  "src": "1564:14:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2747,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1564:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2750,
+                  "mutability": "mutable",
+                  "name": "_settleTime",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2767,
+                  "src": "1588:16:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2749,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1588:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2753,
+                  "mutability": "mutable",
+                  "name": "_underlyingStartRoundHints",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2767,
+                  "src": "1614:40:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2751,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1614:4:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 2752,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1614:6:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2756,
+                  "mutability": "mutable",
+                  "name": "_underlyingEndRoundHints",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2767,
+                  "src": "1664:38:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2754,
+                      "name": "uint",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1664:4:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 2755,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1664:6:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1476:227:14"
+            },
+            "returnParameters": {
+              "id": 2766,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2759,
+                  "mutability": "mutable",
+                  "name": "_split",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2767,
+                  "src": "1730:11:14",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2758,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1730:4:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2762,
+                  "mutability": "mutable",
+                  "name": "_underlyingStarts",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2767,
+                  "src": "1743:30:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_int256_$dyn_memory_ptr",
+                    "typeString": "int256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2760,
+                      "name": "int",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1743:3:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "id": 2761,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1743:5:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_int256_$dyn_storage_ptr",
+                      "typeString": "int256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2765,
+                  "mutability": "mutable",
+                  "name": "_underlyingEnds",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2767,
+                  "src": "1775:28:14",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_int256_$dyn_memory_ptr",
+                    "typeString": "int256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 2763,
+                      "name": "int",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1775:3:14",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "id": 2764,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1775:5:14",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_int256_$dyn_storage_ptr",
+                      "typeString": "int256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1729:75:14"
+            },
+            "scope": 2768,
+            "src": "1462:343:14",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 2769,
+        "src": "367:1440:14"
+      }
+    ],
+    "src": "63:1745:14"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-11-03T13:08:28.343Z",
+  "devdoc": {
+    "details": "Created independently from specification and published to the CollateralSplitRegistry",
+    "kind": "dev",
+    "methods": {
+      "isCollateralSplit()": {
+        "details": "Verifies that contract is a collateral split contract",
+        "returns": {
+          "_0": "true if contract is a collateral split contract"
+        }
+      },
+      "split(address[],address[],uint256,uint256,uint256[],uint256[])": {
+        "details": "Returns ranged value between 0 and 1 multiplied by 10 ^ 12",
+        "params": {
+          "_underlyingEndRoundHints": "specify for each oracle round of the end of Live period",
+          "_underlyingStartRoundHints": "specify for each oracle round of the start of Live period"
+        },
+        "returns": {
+          "_split": "primary asset class' share of collateral at settlement",
+          "_underlyingEnds": "underlying values in the end of Live period",
+          "_underlyingStarts": "underlying values in the start of Live period"
+        }
+      },
+      "symbol()": {
+        "details": "Should be resolved through CollateralSplitRegistry contract",
+        "returns": {
+          "_0": "collateral split specification symbol"
+        }
+      }
+    },
+    "title": "Collateral Split interface",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "isCollateralSplit()": {
+        "notice": "Proof of collateral split contract"
+      },
+      "split(address[],address[],uint256,uint256,uint256[],uint256[])": {
+        "notice": "Calcs primary asset class' share of collateral at settlement."
+      },
+      "symbol()": {
+        "notice": "Symbol of the collateral split"
+      }
+    },
+    "notice": "Contains mathematical functions used to calculate relative claim on collateral of primary and complement assets after settlement.",
+    "version": 1
+  }
+}

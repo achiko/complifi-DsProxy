@@ -1,0 +1,1481 @@
+{
+  "contractName": "StableSplit",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "FRACTION_MULTIPLIER",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "NEGATIVE_INFINITY",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "isCollateralSplit",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "int256",
+          "name": "_u_0",
+          "type": "int256"
+        },
+        {
+          "internalType": "int256",
+          "name": "_u_T",
+          "type": "int256"
+        }
+      ],
+      "name": "normalize",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "int256",
+          "name": "_split",
+          "type": "int256"
+        }
+      ],
+      "name": "range",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "_oracles",
+          "type": "address[]"
+        },
+        {
+          "internalType": "address[]",
+          "name": "_oracleIterators",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_liveTime",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_settleTime",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_underlyingStartRoundHints",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_underlyingEndRoundHints",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "split",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_split",
+          "type": "uint256"
+        },
+        {
+          "internalType": "int256[]",
+          "name": "_underlyingStarts",
+          "type": "int256[]"
+        },
+        {
+          "internalType": "int256[]",
+          "name": "_underlyingEnds",
+          "type": "int256[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function",
+      "constant": true
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "int256",
+          "name": "_normalizedValue",
+          "type": "int256"
+        }
+      ],
+      "name": "splitNominalValue",
+      "outputs": [
+        {
+          "internalType": "int256",
+          "name": "",
+          "type": "int256"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function",
+      "constant": true
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"FRACTION_MULTIPLIER\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"NEGATIVE_INFINITY\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isCollateralSplit\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"int256\",\"name\":\"_u_0\",\"type\":\"int256\"},{\"internalType\":\"int256\",\"name\":\"_u_T\",\"type\":\"int256\"}],\"name\":\"normalize\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"int256\",\"name\":\"_split\",\"type\":\"int256\"}],\"name\":\"range\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address[]\",\"name\":\"_oracles\",\"type\":\"address[]\"},{\"internalType\":\"address[]\",\"name\":\"_oracleIterators\",\"type\":\"address[]\"},{\"internalType\":\"uint256\",\"name\":\"_liveTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_settleTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256[]\",\"name\":\"_underlyingStartRoundHints\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"_underlyingEndRoundHints\",\"type\":\"uint256[]\"}],\"name\":\"split\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"_split\",\"type\":\"uint256\"},{\"internalType\":\"int256[]\",\"name\":\"_underlyingStarts\",\"type\":\"int256[]\"},{\"internalType\":\"int256[]\",\"name\":\"_underlyingEnds\",\"type\":\"int256[]\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"int256\",\"name\":\"_normalizedValue\",\"type\":\"int256\"}],\"name\":\"splitNominalValue\",\"outputs\":[{\"internalType\":\"int256\",\"name\":\"\",\"type\":\"int256\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"isCollateralSplit()\":{\"details\":\"Verifies that contract is a collateral split contract\",\"returns\":{\"_0\":\"true if contract is a collateral split contract\"}},\"split(address[],address[],uint256,uint256,uint256[],uint256[])\":{\"details\":\"Returns ranged value between 0 and 1 multiplied by 10 ^ 12\",\"params\":{\"_underlyingEndRoundHints\":\"specify for each oracle round of the end of Live period\",\"_underlyingStartRoundHints\":\"specify for each oracle round of the start of Live period\"},\"returns\":{\"_split\":\"primary asset class' share of collateral at settlement\",\"_underlyingEnds\":\"underlying values in the end of Live period\",\"_underlyingStarts\":\"underlying values in the start of Live period\"}},\"symbol()\":{\"details\":\"Should be resolved through CollateralSplitRegistry contract\",\"returns\":{\"_0\":\"collateral split specification symbol\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"isCollateralSplit()\":{\"notice\":\"Proof of collateral split contract\"},\"split(address[],address[],uint256,uint256,uint256[],uint256[])\":{\"notice\":\"Calcs primary asset class' share of collateral at settlement.\"},\"symbol()\":{\"notice\":\"Symbol of the collateral split\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/collateralSplits/StableSplit.sol\":\"StableSplit\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1000000},\"remappings\":[]},\"sources\":{\"/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/collateralSplits/CollateralSplitParent.sol\":{\"keccak256\":\"0x926c5c5b339b69c1d89b8974be5b38031c6dc103ce67b9190a514ae1bb661eba\",\"license\":\"GNU General Public License v3.0\",\"urls\":[\"bzz-raw://ece3aed5ad050b936390b8536879db87ec4742c9c2764d4677d0e1a597465d9a\",\"dweb:/ipfs/Qmdu3VkyFFAWhZaJup4C636Tp2Frhc9Gw5yoEdhUHNSevH\"]},\"/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/collateralSplits/ICollateralSplit.sol\":{\"keccak256\":\"0x9eceee71e142cd04b71813212f73781f0b52853712fee77563a911b698e6deed\",\"license\":\"GNU General Public License v3.0\",\"urls\":[\"bzz-raw://4a204ebef4440df972a5b987b3aefa7c995989a62eed7a8bc0a959fb0122ccd1\",\"dweb:/ipfs/QmbjQfLBtXp2gr48GvUskztskmP9B69WKrSqiaM5D71FjQ\"]},\"/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/collateralSplits/StableSplit.sol\":{\"keccak256\":\"0x52d7ae4c36d71fbe56ea51b193e56ed58ec4f63f4dc251a5024a26a9f84fb936\",\"license\":\"GNU General Public License v3.0\",\"urls\":[\"bzz-raw://8deffdf49b7f481b7e1705b76aaef2865a42f0580efd42627d5fde0dfa30f9e8\",\"dweb:/ipfs/QmdNsSbNpYGgyd1yjJ9qQYY8KMEmzVHizfkX6S67T8A466\"]},\"/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/oracleIterators/IOracleIterator.sol\":{\"keccak256\":\"0x129af0ba343ea950e2f00eead6b9103f3bd623a6a605da69e7160c61f2a0da6e\",\"license\":\"GNU General Public License v3.0\",\"urls\":[\"bzz-raw://9a24caca9cc52b1b9768bc97fb4ded912e5c4ccdd1a6039252a76c8217933ea0\",\"dweb:/ipfs/QmWjJUVPUsuHB7xErwL4HTJXudtWnBcx4RXqmHqZyz16Vf\"]},\"@openzeppelin/contracts/math/SignedSafeMath.sol\":{\"keccak256\":\"0x92bf2cb99019349965d5a05c407edebcc8d02d75b8a663d8a6990024ccdea2c4\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d55c57e6be696c9a89eab4227087ca8d28ac15153fd3c50020821bcb46cc2c00\",\"dweb:/ipfs/Qmb7h95SMmy2ZoivpbCGqHW3qRRUHwsAo8L57X64c75B26\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b50611014806100206000396000f3fe608060405234801561001057600080fd5b50600436106100885760003560e01c8063b7580bc31161005b578063b7580bc314610164578063bb18850714610180578063df443f751461045b578063dfd105cb1461047857610088565b806305b24a711461008d5780631e18b7b2146100bc5780634dcd7dee146100df57806395d89b41146100e7575b600080fd5b6100aa600480360360208110156100a357600080fd5b5035610480565b60408051918252519081900360200190f35b6100aa600480360360408110156100d257600080fd5b50803590602001356104b2565b6100aa61067b565b6100ef61069f565b6040805160208082528351818301528351919283929083019185019080838360005b83811015610129578181015183820152602001610111565b50505050905090810190601f1680156101565780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61016c6106d6565b604080519115158252519081900360200190f35b6103bb600480360360c081101561019657600080fd5b8101906020810181356401000000008111156101b157600080fd5b8201836020820111156101c357600080fd5b803590602001918460208302840111640100000000831117156101e557600080fd5b919080806020026020016040519081016040528093929190818152602001838360200280828437600092019190915250929594936020810193503591505064010000000081111561023557600080fd5b82018360208201111561024757600080fd5b8035906020019184602083028401116401000000008311171561026957600080fd5b91908080602002602001604051908101604052809392919081815260200183836020028082843760009201919091525092958435956020860135959194509250606081019150604001356401000000008111156102c557600080fd5b8201836020820111156102d757600080fd5b803590602001918460208302840111640100000000831117156102f957600080fd5b919080806020026020016040519081016040528093929190818152602001838360200280828437600092019190915250929594936020810193503591505064010000000081111561034957600080fd5b82018360208201111561035b57600080fd5b8035906020019184602083028401116401000000008311171561037d57600080fd5b9190808060200260200160405190810160405280939291908181526020018383602002808284376000920191909152509295506106db945050505050565b604051808481526020018060200180602001838103835285818151815260200191508051906020019060200280838360005b838110156104055781810151838201526020016103ed565b50505050905001838103825284818151815260200191508051906020019060200280838360005b8381101561044457818101518382015260200161042c565b505050509050019550505050505060405180910390f35b6100aa6004803603602081101561047157600080fd5b5035610c53565b6100aa610cad565b600064e8d4a51000821261049a575064e8d4a510006104ad565b600082136104aa575060006104ad565b50805b919050565b60007f800000000000000000000000000000000000000000000000000000000000000083141561054357604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152600d60248201527f755f3020697320616273656e7400000000000000000000000000000000000000604482015290519081900360640190fd5b7f80000000000000000000000000000000000000000000000000000000000000008214156105d257604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152600d60248201527f755f5420697320616273656e7400000000000000000000000000000000000000604482015290519081900360640190fd5b6000831361064157604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601960248201527f755f30206973206c657373206f7220657175616c207a65726f00000000000000604482015290519081900360640190fd5b600082121561064f57600091505b6106728361066c64e8d4a510006106668684610cb6565b90610d35565b90610e4c565b90505b92915050565b7f800000000000000000000000000000000000000000000000000000000000000081565b60408051808201909152600481527f5374616200000000000000000000000000000000000000000000000000000000602082015290565b600190565b6000606080885160011461075057604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601460248201527f4d6f7265207468616e206f6e65206f7261636c65000000000000000000000000604482015290519081900360640190fd5b600073ffffffffffffffffffffffffffffffffffffffff168960008151811061077557fe5b602002602001015173ffffffffffffffffffffffffffffffffffffffff16141561080057604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152600f60248201527f4f7261636c6520697320656d7074790000000000000000000000000000000000604482015290519081900360640190fd5b600073ffffffffffffffffffffffffffffffffffffffff168860008151811061082557fe5b602002602001015173ffffffffffffffffffffffffffffffffffffffff1614156108b057604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601860248201527f4f7261636c65206974657261746f7220697320656d7074790000000000000000604482015290519081900360640190fd5b604080516001808252818301909252906020808301908036833750506040805160018082528183019092529294509050602080830190803683370190505090506000886000815181106108ff57fe5b602002602001015190508073ffffffffffffffffffffffffffffffffffffffff166312df4d3e6040518163ffffffff1660e01b815260040160206040518083038186803b15801561094f57600080fd5b505afa158015610963573d6000803e3d6000fd5b505050506040513d602081101561097957600080fd5b50516109e657604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601360248201527f4e6f74206f7261636c65206974657261746f7200000000000000000000000000604482015290519081900360640190fd5b8073ffffffffffffffffffffffffffffffffffffffff166376d68cb68b600081518110610a0f57fe5b60200260200101518a896040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff16815260200183815260200180602001828103825283818151815260200191508051906020019060200280838360005b83811015610a8a578181015183820152602001610a72565b5050505090500194505050505060206040518083038186803b158015610aaf57600080fd5b505afa158015610ac3573d6000803e3d6000fd5b505050506040513d6020811015610ad957600080fd5b505183518490600090610ae857fe5b6020026020010181815250508073ffffffffffffffffffffffffffffffffffffffff166376d68cb68b600081518110610b1d57fe5b602002602001015189886040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff16815260200183815260200180602001828103825283818151815260200191508051906020019060200280838360005b83811015610b98578181015183820152602001610b80565b5050505090500194505050505060206040518083038186803b158015610bbd57600080fd5b505afa158015610bd1573d6000803e3d6000fd5b505050506040513d6020811015610be757600080fd5b505182518390600090610bf657fe5b602002602001018181525050610c44610c3f610c3a85600081518110610c1857fe5b602002602001015185600081518110610c2d57fe5b60200260200101516104b2565b610c53565b610480565b93505096509650969350505050565b60007fffffffffffffffffffffffffffffffffffffffffffffffffffffff8b95ad78008213610c88575064e8d4a510006104ad565b600264e8d4a5100083010269d3c21bcecceda100000081610ca557fe5b0590506104ad565b64e8d4a5100081565b6000818303818312801590610ccb5750838113155b80610ce05750600083128015610ce057508381135b610672576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526024815260200180610fbb6024913960400191505060405180910390fd5b600082610d4457506000610675565b827fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff148015610d9257507f800000000000000000000000000000000000000000000000000000000000000082145b15610de8576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526027815260200180610f946027913960400191505060405180910390fd5b82820282848281610df557fe5b0514610672576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526027815260200180610f946027913960400191505060405180910390fd5b600081610eba57604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820181905260248201527f5369676e6564536166654d6174683a206469766973696f6e206279207a65726f604482015290519081900360640190fd5b817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff148015610f0857507f800000000000000000000000000000000000000000000000000000000000000083145b15610f5e576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526021815260200180610f736021913960400191505060405180910390fd5b6000828481610f6957fe5b0594935050505056fe5369676e6564536166654d6174683a206469766973696f6e206f766572666c6f775369676e6564536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f775369676e6564536166654d6174683a207375627472616374696f6e206f766572666c6f77a26469706673582212209a50a532dba46d4f4ab059e0b3ecc6f4912d8fed30ab4820766ef1daca14c8c964736f6c634300060c0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100885760003560e01c8063b7580bc31161005b578063b7580bc314610164578063bb18850714610180578063df443f751461045b578063dfd105cb1461047857610088565b806305b24a711461008d5780631e18b7b2146100bc5780634dcd7dee146100df57806395d89b41146100e7575b600080fd5b6100aa600480360360208110156100a357600080fd5b5035610480565b60408051918252519081900360200190f35b6100aa600480360360408110156100d257600080fd5b50803590602001356104b2565b6100aa61067b565b6100ef61069f565b6040805160208082528351818301528351919283929083019185019080838360005b83811015610129578181015183820152602001610111565b50505050905090810190601f1680156101565780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b61016c6106d6565b604080519115158252519081900360200190f35b6103bb600480360360c081101561019657600080fd5b8101906020810181356401000000008111156101b157600080fd5b8201836020820111156101c357600080fd5b803590602001918460208302840111640100000000831117156101e557600080fd5b919080806020026020016040519081016040528093929190818152602001838360200280828437600092019190915250929594936020810193503591505064010000000081111561023557600080fd5b82018360208201111561024757600080fd5b8035906020019184602083028401116401000000008311171561026957600080fd5b91908080602002602001604051908101604052809392919081815260200183836020028082843760009201919091525092958435956020860135959194509250606081019150604001356401000000008111156102c557600080fd5b8201836020820111156102d757600080fd5b803590602001918460208302840111640100000000831117156102f957600080fd5b919080806020026020016040519081016040528093929190818152602001838360200280828437600092019190915250929594936020810193503591505064010000000081111561034957600080fd5b82018360208201111561035b57600080fd5b8035906020019184602083028401116401000000008311171561037d57600080fd5b9190808060200260200160405190810160405280939291908181526020018383602002808284376000920191909152509295506106db945050505050565b604051808481526020018060200180602001838103835285818151815260200191508051906020019060200280838360005b838110156104055781810151838201526020016103ed565b50505050905001838103825284818151815260200191508051906020019060200280838360005b8381101561044457818101518382015260200161042c565b505050509050019550505050505060405180910390f35b6100aa6004803603602081101561047157600080fd5b5035610c53565b6100aa610cad565b600064e8d4a51000821261049a575064e8d4a510006104ad565b600082136104aa575060006104ad565b50805b919050565b60007f800000000000000000000000000000000000000000000000000000000000000083141561054357604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152600d60248201527f755f3020697320616273656e7400000000000000000000000000000000000000604482015290519081900360640190fd5b7f80000000000000000000000000000000000000000000000000000000000000008214156105d257604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152600d60248201527f755f5420697320616273656e7400000000000000000000000000000000000000604482015290519081900360640190fd5b6000831361064157604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601960248201527f755f30206973206c657373206f7220657175616c207a65726f00000000000000604482015290519081900360640190fd5b600082121561064f57600091505b6106728361066c64e8d4a510006106668684610cb6565b90610d35565b90610e4c565b90505b92915050565b7f800000000000000000000000000000000000000000000000000000000000000081565b60408051808201909152600481527f5374616200000000000000000000000000000000000000000000000000000000602082015290565b600190565b6000606080885160011461075057604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601460248201527f4d6f7265207468616e206f6e65206f7261636c65000000000000000000000000604482015290519081900360640190fd5b600073ffffffffffffffffffffffffffffffffffffffff168960008151811061077557fe5b602002602001015173ffffffffffffffffffffffffffffffffffffffff16141561080057604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152600f60248201527f4f7261636c6520697320656d7074790000000000000000000000000000000000604482015290519081900360640190fd5b600073ffffffffffffffffffffffffffffffffffffffff168860008151811061082557fe5b602002602001015173ffffffffffffffffffffffffffffffffffffffff1614156108b057604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601860248201527f4f7261636c65206974657261746f7220697320656d7074790000000000000000604482015290519081900360640190fd5b604080516001808252818301909252906020808301908036833750506040805160018082528183019092529294509050602080830190803683370190505090506000886000815181106108ff57fe5b602002602001015190508073ffffffffffffffffffffffffffffffffffffffff166312df4d3e6040518163ffffffff1660e01b815260040160206040518083038186803b15801561094f57600080fd5b505afa158015610963573d6000803e3d6000fd5b505050506040513d602081101561097957600080fd5b50516109e657604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152601360248201527f4e6f74206f7261636c65206974657261746f7200000000000000000000000000604482015290519081900360640190fd5b8073ffffffffffffffffffffffffffffffffffffffff166376d68cb68b600081518110610a0f57fe5b60200260200101518a896040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff16815260200183815260200180602001828103825283818151815260200191508051906020019060200280838360005b83811015610a8a578181015183820152602001610a72565b5050505090500194505050505060206040518083038186803b158015610aaf57600080fd5b505afa158015610ac3573d6000803e3d6000fd5b505050506040513d6020811015610ad957600080fd5b505183518490600090610ae857fe5b6020026020010181815250508073ffffffffffffffffffffffffffffffffffffffff166376d68cb68b600081518110610b1d57fe5b602002602001015189886040518463ffffffff1660e01b8152600401808473ffffffffffffffffffffffffffffffffffffffff16815260200183815260200180602001828103825283818151815260200191508051906020019060200280838360005b83811015610b98578181015183820152602001610b80565b5050505090500194505050505060206040518083038186803b158015610bbd57600080fd5b505afa158015610bd1573d6000803e3d6000fd5b505050506040513d6020811015610be757600080fd5b505182518390600090610bf657fe5b602002602001018181525050610c44610c3f610c3a85600081518110610c1857fe5b602002602001015185600081518110610c2d57fe5b60200260200101516104b2565b610c53565b610480565b93505096509650969350505050565b60007fffffffffffffffffffffffffffffffffffffffffffffffffffffff8b95ad78008213610c88575064e8d4a510006104ad565b600264e8d4a5100083010269d3c21bcecceda100000081610ca557fe5b0590506104ad565b64e8d4a5100081565b6000818303818312801590610ccb5750838113155b80610ce05750600083128015610ce057508381135b610672576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526024815260200180610fbb6024913960400191505060405180910390fd5b600082610d4457506000610675565b827fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff148015610d9257507f800000000000000000000000000000000000000000000000000000000000000082145b15610de8576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526027815260200180610f946027913960400191505060405180910390fd5b82820282848281610df557fe5b0514610672576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526027815260200180610f946027913960400191505060405180910390fd5b600081610eba57604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820181905260248201527f5369676e6564536166654d6174683a206469766973696f6e206279207a65726f604482015290519081900360640190fd5b817fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff148015610f0857507f800000000000000000000000000000000000000000000000000000000000000083145b15610f5e576040517f08c379a0000000000000000000000000000000000000000000000000000000008152600401808060200182810382526021815260200180610f736021913960400191505060405180910390fd5b6000828481610f6957fe5b0594935050505056fe5369676e6564536166654d6174683a206469766973696f6e206f766572666c6f775369676e6564536166654d6174683a206d756c7469706c69636174696f6e206f766572666c6f775369676e6564536166654d6174683a207375627472616374696f6e206f766572666c6f77a26469706673582212209a50a532dba46d4f4ab059e0b3ecc6f4912d8fed30ab4820766ef1daca14c8c964736f6c634300060c0033",
+  "immutableReferences": {},
+  "sourceMap": "127:481:17:-:0;;;;;;;;;;;;;;;;;;;",
+  "deployedSourceMap": "127:481:17:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2233:256:13;;;;;;;;;;;;;;;;-1:-1:-1;2233:256:13;;:::i;:::-;;;;;;;;;;;;;;;;1839:388;;;;;;;;;;;;;;;;-1:-1:-1;1839:388:13;;;;;;;:::i;390:59::-;;;:::i;178:95:17:-;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;456:94:13;;;:::i;:::-;;;;;;;;;;;;;;;;;;556:1183;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;556:1183:13;;;;;;;;-1:-1:-1;556:1183:13;;-1:-1:-1;;556:1183:13;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;556:1183:13;;;;;;;;;;;;-1:-1:-1;556:1183:13;-1:-1:-1;556:1183:13;;;;-1:-1:-1;556:1183:13;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;556:1183:13;;;;;;;;-1:-1:-1;556:1183:13;;-1:-1:-1;;556:1183:13;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;556:1183:13;;-1:-1:-1;556:1183:13;;-1:-1:-1;;;;;556:1183:13:i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;279:327:17;;;;;;;;;;;;;;;;-1:-1:-1;279:327:17;;:::i;333:51:13:-;;;:::i;2233:256::-;2283:7;378:6;2305;:29;2302:91;;-1:-1:-1;378:6:13;2350:32;;2302:91;2415:1;2405:6;:11;2402:49;;-1:-1:-1;2439:1:13;2432:8;;2402:49;-1:-1:-1;2475:6:13;2233:256;;;;:::o;1839:388::-;1912:6;433:16;1937:4;:25;;1929:51;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;433:16;1998:4;:25;;1990:51;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2066:1;2059:4;:8;2051:46;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;2118:1;2111:4;:8;2108:46;;;2142:1;2135:8;;2108:46;2171:49;2215:4;2171:39;378:6;2171:14;:4;2215;2171:8;:14::i;:::-;:18;;:39::i;:::-;:43;;:49::i;:::-;2164:56;;1839:388;;;;;:::o;390:59::-;433:16;390:59;:::o;178:95:17:-;253:13;;;;;;;;;;;;;;;;;178:95;:::o;456:94:13:-;539:4;456:94;:::o;556:1183::-;841:11;854:33;889:31;940:8;:15;959:1;940:20;932:53;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1026:1;1003:25;;:8;1012:1;1003:11;;;;;;;;;;;;;;:25;;;;995:53;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1097:1;1066:33;;:16;1083:1;1066:19;;;;;;;;;;;;;;:33;;;;1058:70;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1159:15;;;1172:1;1159:15;;;;;;;;;;;;;;;;;;;-1:-1:-1;;1202:15:13;;;1215:1;1202:15;;;;;;;;;1139:35;;-1:-1:-1;1215:1:13;-1:-1:-1;1202:15:13;;;;;;;;;;;-1:-1:-1;1202:15:13;1184:33;;1228:24;1271:16;1288:1;1271:19;;;;;;;;;;;;;;1228:63;;1309:8;:25;;;:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;1309:27:13;1301:59;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1394:8;:26;;;1421:8;1430:1;1421:11;;;;;;;;;;;;;;1434:9;1445:26;1394:78;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;1394:78:13;1371:20;;:17;;1389:1;;1371:20;;;;;;;;;:101;;;;;1503:8;:26;;;1530:8;1539:1;1530:11;;;;;;;;;;;;;;1543;1556:24;1503:78;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;-1:-1:-1;1503:78:13;1482:18;;:15;;1498:1;;1482:18;;;;;;;;;:99;;;;;1601:131;1620:102;1655:53;1666:17;1684:1;1666:20;;;;;;;;;;;;;;1688:15;1704:1;1688:18;;;;;;;;;;;;;;1655:9;:53::i;:::-;1620:17;:102::i;:::-;1601:5;:131::i;:::-;1592:140;;556:1183;;;;;;;;;;;:::o;279:327:17:-;357:3;394:24;374:44;;371:229;;-1:-1:-1;378:6:13;434:26:17;;371:229;543:1;378:6:13;548:39:17;;543:45;498:41;543:45;498:91;;;;;491:98;;;;333:51:13;378:6;333:51;:::o;2000:213:67:-;2056:6;2085:5;;;2109:6;;;;;;:16;;;2124:1;2119;:6;;2109:16;2108:38;;;;2135:1;2131;:5;:14;;;;;2144:1;2140;:5;2131:14;2100:87;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;483:554;539:6;779;775:45;;-1:-1:-1;808:1:67;801:8;;775:45;840:1;845:2;840:7;:27;;;;;230:7;851:1;:16;840:27;838:30;830:82;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;934:5;;;938:1;934;:5;:1;957:5;;;;;:10;949:62;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1497:264;1553:6;1579;1571:51;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1642:1;1647:2;1642:7;:27;;;;;230:7;1653:1;:16;1642:27;1640:30;1632:76;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1719:8;1734:1;1730;:5;;;;;;;1497:264;-1:-1:-1;;;;1497:264:67:o",
+  "source": "// \"SPDX-License-Identifier: GNU General Public License v3.0\"\n\npragma solidity 0.6.12;\n\nimport \"./CollateralSplitParent.sol\";\n\ncontract StableSplit is CollateralSplitParent{\n    function symbol() external override pure returns (string memory) {\n        return 'Stab';\n    }\n\n    function splitNominalValue(int _normalizedValue) public override pure returns(int){\n        if(_normalizedValue <= -(FRACTION_MULTIPLIER/2)) {\n            return FRACTION_MULTIPLIER;\n        } else {\n            return FRACTION_MULTIPLIER * FRACTION_MULTIPLIER / (2 * (FRACTION_MULTIPLIER  + _normalizedValue));\n        }\n    }\n}\n",
+  "sourcePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/collateralSplits/StableSplit.sol",
+  "ast": {
+    "absolutePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/collateralSplits/StableSplit.sol",
+    "exportedSymbols": {
+      "StableSplit": [
+        2909
+      ]
+    },
+    "id": 2910,
+    "license": "GNU General Public License v3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2863,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "63:23:17"
+      },
+      {
+        "absolutePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/collateralSplits/CollateralSplitParent.sol",
+        "file": "./CollateralSplitParent.sol",
+        "id": 2864,
+        "nodeType": "ImportDirective",
+        "scope": 2910,
+        "sourceUnit": 2725,
+        "src": "88:37:17",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2865,
+              "name": "CollateralSplitParent",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2724,
+              "src": "151:21:17",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CollateralSplitParent_$2724",
+                "typeString": "contract CollateralSplitParent"
+              }
+            },
+            "id": 2866,
+            "nodeType": "InheritanceSpecifier",
+            "src": "151:21:17"
+          }
+        ],
+        "contractDependencies": [
+          2724,
+          2768
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2909,
+        "linearizedBaseContracts": [
+          2909,
+          2724,
+          2768
+        ],
+        "name": "StableSplit",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "baseFunctions": [
+              2739
+            ],
+            "body": {
+              "id": 2874,
+              "nodeType": "Block",
+              "src": "243:30:17",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "53746162",
+                    "id": 2872,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "260:6:17",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_adb38369b33a364ff023e567baca6cd903661efaa94bb2fa883110545e844d6a",
+                      "typeString": "literal_string \"Stab\""
+                    },
+                    "value": "Stab"
+                  },
+                  "functionReturnParameters": 2871,
+                  "id": 2873,
+                  "nodeType": "Return",
+                  "src": "253:13:17"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "95d89b41",
+            "id": 2875,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "symbol",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 2868,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "205:8:17"
+            },
+            "parameters": {
+              "id": 2867,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "193:2:17"
+            },
+            "returnParameters": {
+              "id": 2871,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2870,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2875,
+                  "src": "228:13:17",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2869,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "228:6:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "227:15:17"
+            },
+            "scope": 2909,
+            "src": "178:95:17",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "baseFunctions": [
+              2642
+            ],
+            "body": {
+              "id": 2907,
+              "nodeType": "Block",
+              "src": "361:245:17",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    },
+                    "id": 2889,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 2883,
+                      "name": "_normalizedValue",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2877,
+                      "src": "374:16:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<=",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 2888,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "-",
+                      "prefix": true,
+                      "src": "394:24:17",
+                      "subExpression": {
+                        "argumentTypes": null,
+                        "components": [
+                          {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_int256",
+                              "typeString": "int256"
+                            },
+                            "id": 2886,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "id": 2884,
+                              "name": "FRACTION_MULTIPLIER",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2486,
+                              "src": "396:19:17",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_int256",
+                                "typeString": "int256"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "/",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "hexValue": "32",
+                              "id": 2885,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "416:1:17",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_2_by_1",
+                                "typeString": "int_const 2"
+                              },
+                              "value": "2"
+                            },
+                            "src": "396:21:17",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_int256",
+                              "typeString": "int256"
+                            }
+                          }
+                        ],
+                        "id": 2887,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "395:23:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int256",
+                          "typeString": "int256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "src": "374:44:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "id": 2905,
+                    "nodeType": "Block",
+                    "src": "477:123:17",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          },
+                          "id": 2903,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_int256",
+                              "typeString": "int256"
+                            },
+                            "id": 2895,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "id": 2893,
+                              "name": "FRACTION_MULTIPLIER",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2486,
+                              "src": "498:19:17",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_int256",
+                                "typeString": "int256"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "*",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "id": 2894,
+                              "name": "FRACTION_MULTIPLIER",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2486,
+                              "src": "520:19:17",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_int256",
+                                "typeString": "int256"
+                              }
+                            },
+                            "src": "498:41:17",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_int256",
+                              "typeString": "int256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "/",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "components": [
+                              {
+                                "argumentTypes": null,
+                                "commonType": {
+                                  "typeIdentifier": "t_int256",
+                                  "typeString": "int256"
+                                },
+                                "id": 2901,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "leftExpression": {
+                                  "argumentTypes": null,
+                                  "hexValue": "32",
+                                  "id": 2896,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "number",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "543:1:17",
+                                  "subdenomination": null,
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_rational_2_by_1",
+                                    "typeString": "int_const 2"
+                                  },
+                                  "value": "2"
+                                },
+                                "nodeType": "BinaryOperation",
+                                "operator": "*",
+                                "rightExpression": {
+                                  "argumentTypes": null,
+                                  "components": [
+                                    {
+                                      "argumentTypes": null,
+                                      "commonType": {
+                                        "typeIdentifier": "t_int256",
+                                        "typeString": "int256"
+                                      },
+                                      "id": 2899,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "leftExpression": {
+                                        "argumentTypes": null,
+                                        "id": 2897,
+                                        "name": "FRACTION_MULTIPLIER",
+                                        "nodeType": "Identifier",
+                                        "overloadedDeclarations": [],
+                                        "referencedDeclaration": 2486,
+                                        "src": "548:19:17",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_int256",
+                                          "typeString": "int256"
+                                        }
+                                      },
+                                      "nodeType": "BinaryOperation",
+                                      "operator": "+",
+                                      "rightExpression": {
+                                        "argumentTypes": null,
+                                        "id": 2898,
+                                        "name": "_normalizedValue",
+                                        "nodeType": "Identifier",
+                                        "overloadedDeclarations": [],
+                                        "referencedDeclaration": 2877,
+                                        "src": "571:16:17",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_int256",
+                                          "typeString": "int256"
+                                        }
+                                      },
+                                      "src": "548:39:17",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_int256",
+                                        "typeString": "int256"
+                                      }
+                                    }
+                                  ],
+                                  "id": 2900,
+                                  "isConstant": false,
+                                  "isInlineArray": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "nodeType": "TupleExpression",
+                                  "src": "547:41:17",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_int256",
+                                    "typeString": "int256"
+                                  }
+                                },
+                                "src": "543:45:17",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_int256",
+                                  "typeString": "int256"
+                                }
+                              }
+                            ],
+                            "id": 2902,
+                            "isConstant": false,
+                            "isInlineArray": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "nodeType": "TupleExpression",
+                            "src": "542:47:17",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_int256",
+                              "typeString": "int256"
+                            }
+                          },
+                          "src": "498:91:17",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          }
+                        },
+                        "functionReturnParameters": 2882,
+                        "id": 2904,
+                        "nodeType": "Return",
+                        "src": "491:98:17"
+                      }
+                    ]
+                  },
+                  "id": 2906,
+                  "nodeType": "IfStatement",
+                  "src": "371:229:17",
+                  "trueBody": {
+                    "id": 2892,
+                    "nodeType": "Block",
+                    "src": "420:51:17",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 2890,
+                          "name": "FRACTION_MULTIPLIER",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2486,
+                          "src": "441:19:17",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          }
+                        },
+                        "functionReturnParameters": 2882,
+                        "id": 2891,
+                        "nodeType": "Return",
+                        "src": "434:26:17"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "df443f75",
+            "id": 2908,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "splitNominalValue",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 2879,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "335:8:17"
+            },
+            "parameters": {
+              "id": 2878,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2877,
+                  "mutability": "mutable",
+                  "name": "_normalizedValue",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2908,
+                  "src": "306:20:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 2876,
+                    "name": "int",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "306:3:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "305:22:17"
+            },
+            "returnParameters": {
+              "id": 2882,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2881,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2908,
+                  "src": "357:3:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 2880,
+                    "name": "int",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "357:3:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "356:5:17"
+            },
+            "scope": 2909,
+            "src": "279:327:17",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2910,
+        "src": "127:481:17"
+      }
+    ],
+    "src": "63:546:17"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/collateralSplits/StableSplit.sol",
+    "exportedSymbols": {
+      "StableSplit": [
+        2909
+      ]
+    },
+    "id": 2910,
+    "license": "GNU General Public License v3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 2863,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "63:23:17"
+      },
+      {
+        "absolutePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/collateralSplits/CollateralSplitParent.sol",
+        "file": "./CollateralSplitParent.sol",
+        "id": 2864,
+        "nodeType": "ImportDirective",
+        "scope": 2910,
+        "sourceUnit": 2725,
+        "src": "88:37:17",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 2865,
+              "name": "CollateralSplitParent",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 2724,
+              "src": "151:21:17",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_CollateralSplitParent_$2724",
+                "typeString": "contract CollateralSplitParent"
+              }
+            },
+            "id": 2866,
+            "nodeType": "InheritanceSpecifier",
+            "src": "151:21:17"
+          }
+        ],
+        "contractDependencies": [
+          2724,
+          2768
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 2909,
+        "linearizedBaseContracts": [
+          2909,
+          2724,
+          2768
+        ],
+        "name": "StableSplit",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "baseFunctions": [
+              2739
+            ],
+            "body": {
+              "id": 2874,
+              "nodeType": "Block",
+              "src": "243:30:17",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "53746162",
+                    "id": 2872,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "string",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "260:6:17",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_stringliteral_adb38369b33a364ff023e567baca6cd903661efaa94bb2fa883110545e844d6a",
+                      "typeString": "literal_string \"Stab\""
+                    },
+                    "value": "Stab"
+                  },
+                  "functionReturnParameters": 2871,
+                  "id": 2873,
+                  "nodeType": "Return",
+                  "src": "253:13:17"
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "95d89b41",
+            "id": 2875,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "symbol",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 2868,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "205:8:17"
+            },
+            "parameters": {
+              "id": 2867,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "193:2:17"
+            },
+            "returnParameters": {
+              "id": 2871,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2870,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2875,
+                  "src": "228:13:17",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 2869,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "228:6:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "227:15:17"
+            },
+            "scope": 2909,
+            "src": "178:95:17",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "baseFunctions": [
+              2642
+            ],
+            "body": {
+              "id": 2907,
+              "nodeType": "Block",
+              "src": "361:245:17",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    },
+                    "id": 2889,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 2883,
+                      "name": "_normalizedValue",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 2877,
+                      "src": "374:16:17",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "<=",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 2888,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "UnaryOperation",
+                      "operator": "-",
+                      "prefix": true,
+                      "src": "394:24:17",
+                      "subExpression": {
+                        "argumentTypes": null,
+                        "components": [
+                          {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_int256",
+                              "typeString": "int256"
+                            },
+                            "id": 2886,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "id": 2884,
+                              "name": "FRACTION_MULTIPLIER",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2486,
+                              "src": "396:19:17",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_int256",
+                                "typeString": "int256"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "/",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "hexValue": "32",
+                              "id": 2885,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "number",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "416:1:17",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_rational_2_by_1",
+                                "typeString": "int_const 2"
+                              },
+                              "value": "2"
+                            },
+                            "src": "396:21:17",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_int256",
+                              "typeString": "int256"
+                            }
+                          }
+                        ],
+                        "id": 2887,
+                        "isConstant": false,
+                        "isInlineArray": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "nodeType": "TupleExpression",
+                        "src": "395:23:17",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_int256",
+                          "typeString": "int256"
+                        }
+                      },
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "src": "374:44:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "id": 2905,
+                    "nodeType": "Block",
+                    "src": "477:123:17",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "commonType": {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          },
+                          "id": 2903,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftExpression": {
+                            "argumentTypes": null,
+                            "commonType": {
+                              "typeIdentifier": "t_int256",
+                              "typeString": "int256"
+                            },
+                            "id": 2895,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "lValueRequested": false,
+                            "leftExpression": {
+                              "argumentTypes": null,
+                              "id": 2893,
+                              "name": "FRACTION_MULTIPLIER",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2486,
+                              "src": "498:19:17",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_int256",
+                                "typeString": "int256"
+                              }
+                            },
+                            "nodeType": "BinaryOperation",
+                            "operator": "*",
+                            "rightExpression": {
+                              "argumentTypes": null,
+                              "id": 2894,
+                              "name": "FRACTION_MULTIPLIER",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 2486,
+                              "src": "520:19:17",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_int256",
+                                "typeString": "int256"
+                              }
+                            },
+                            "src": "498:41:17",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_int256",
+                              "typeString": "int256"
+                            }
+                          },
+                          "nodeType": "BinaryOperation",
+                          "operator": "/",
+                          "rightExpression": {
+                            "argumentTypes": null,
+                            "components": [
+                              {
+                                "argumentTypes": null,
+                                "commonType": {
+                                  "typeIdentifier": "t_int256",
+                                  "typeString": "int256"
+                                },
+                                "id": 2901,
+                                "isConstant": false,
+                                "isLValue": false,
+                                "isPure": false,
+                                "lValueRequested": false,
+                                "leftExpression": {
+                                  "argumentTypes": null,
+                                  "hexValue": "32",
+                                  "id": 2896,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "kind": "number",
+                                  "lValueRequested": false,
+                                  "nodeType": "Literal",
+                                  "src": "543:1:17",
+                                  "subdenomination": null,
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_rational_2_by_1",
+                                    "typeString": "int_const 2"
+                                  },
+                                  "value": "2"
+                                },
+                                "nodeType": "BinaryOperation",
+                                "operator": "*",
+                                "rightExpression": {
+                                  "argumentTypes": null,
+                                  "components": [
+                                    {
+                                      "argumentTypes": null,
+                                      "commonType": {
+                                        "typeIdentifier": "t_int256",
+                                        "typeString": "int256"
+                                      },
+                                      "id": 2899,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "leftExpression": {
+                                        "argumentTypes": null,
+                                        "id": 2897,
+                                        "name": "FRACTION_MULTIPLIER",
+                                        "nodeType": "Identifier",
+                                        "overloadedDeclarations": [],
+                                        "referencedDeclaration": 2486,
+                                        "src": "548:19:17",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_int256",
+                                          "typeString": "int256"
+                                        }
+                                      },
+                                      "nodeType": "BinaryOperation",
+                                      "operator": "+",
+                                      "rightExpression": {
+                                        "argumentTypes": null,
+                                        "id": 2898,
+                                        "name": "_normalizedValue",
+                                        "nodeType": "Identifier",
+                                        "overloadedDeclarations": [],
+                                        "referencedDeclaration": 2877,
+                                        "src": "571:16:17",
+                                        "typeDescriptions": {
+                                          "typeIdentifier": "t_int256",
+                                          "typeString": "int256"
+                                        }
+                                      },
+                                      "src": "548:39:17",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_int256",
+                                        "typeString": "int256"
+                                      }
+                                    }
+                                  ],
+                                  "id": 2900,
+                                  "isConstant": false,
+                                  "isInlineArray": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "nodeType": "TupleExpression",
+                                  "src": "547:41:17",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_int256",
+                                    "typeString": "int256"
+                                  }
+                                },
+                                "src": "543:45:17",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_int256",
+                                  "typeString": "int256"
+                                }
+                              }
+                            ],
+                            "id": 2902,
+                            "isConstant": false,
+                            "isInlineArray": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "nodeType": "TupleExpression",
+                            "src": "542:47:17",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_int256",
+                              "typeString": "int256"
+                            }
+                          },
+                          "src": "498:91:17",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          }
+                        },
+                        "functionReturnParameters": 2882,
+                        "id": 2904,
+                        "nodeType": "Return",
+                        "src": "491:98:17"
+                      }
+                    ]
+                  },
+                  "id": 2906,
+                  "nodeType": "IfStatement",
+                  "src": "371:229:17",
+                  "trueBody": {
+                    "id": 2892,
+                    "nodeType": "Block",
+                    "src": "420:51:17",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 2890,
+                          "name": "FRACTION_MULTIPLIER",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 2486,
+                          "src": "441:19:17",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_int256",
+                            "typeString": "int256"
+                          }
+                        },
+                        "functionReturnParameters": 2882,
+                        "id": 2891,
+                        "nodeType": "Return",
+                        "src": "434:26:17"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "functionSelector": "df443f75",
+            "id": 2908,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "splitNominalValue",
+            "nodeType": "FunctionDefinition",
+            "overrides": {
+              "id": 2879,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "335:8:17"
+            },
+            "parameters": {
+              "id": 2878,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2877,
+                  "mutability": "mutable",
+                  "name": "_normalizedValue",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2908,
+                  "src": "306:20:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 2876,
+                    "name": "int",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "306:3:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "305:22:17"
+            },
+            "returnParameters": {
+              "id": 2882,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2881,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 2908,
+                  "src": "357:3:17",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 2880,
+                    "name": "int",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "357:3:17",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "356:5:17"
+            },
+            "scope": 2909,
+            "src": "279:327:17",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "scope": 2910,
+        "src": "127:481:17"
+      }
+    ],
+    "src": "63:546:17"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {
+    "1604409002293": {
+      "events": {},
+      "links": {},
+      "address": "0x3Dd598E0cc5b818405cb0D00EBc2fE07E7da57f9",
+      "transactionHash": "0xc3e644574330a00a005acf86e69fabf9d6113f1578ea54740dc7d442d49dffbf"
+    },
+    "1604409614609": {
+      "events": {},
+      "links": {},
+      "address": "0x519904b26Df239e74144923020BB7cc1c46815eA",
+      "transactionHash": "0x0f8e267e070c23a38318af4b137a905ef9185c1d15e6ed68473cb63d2a17d6a2"
+    }
+  },
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-11-03T13:23:36.541Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "isCollateralSplit()": {
+        "details": "Verifies that contract is a collateral split contract",
+        "returns": {
+          "_0": "true if contract is a collateral split contract"
+        }
+      },
+      "split(address[],address[],uint256,uint256,uint256[],uint256[])": {
+        "details": "Returns ranged value between 0 and 1 multiplied by 10 ^ 12",
+        "params": {
+          "_underlyingEndRoundHints": "specify for each oracle round of the end of Live period",
+          "_underlyingStartRoundHints": "specify for each oracle round of the start of Live period"
+        },
+        "returns": {
+          "_split": "primary asset class' share of collateral at settlement",
+          "_underlyingEnds": "underlying values in the end of Live period",
+          "_underlyingStarts": "underlying values in the start of Live period"
+        }
+      },
+      "symbol()": {
+        "details": "Should be resolved through CollateralSplitRegistry contract",
+        "returns": {
+          "_0": "collateral split specification symbol"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "isCollateralSplit()": {
+        "notice": "Proof of collateral split contract"
+      },
+      "split(address[],address[],uint256,uint256,uint256[],uint256[])": {
+        "notice": "Calcs primary asset class' share of collateral at settlement."
+      },
+      "symbol()": {
+        "notice": "Symbol of the collateral split"
+      }
+    },
+    "version": 1
+  }
+}

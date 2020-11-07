@@ -1,0 +1,677 @@
+{
+  "contractName": "ITokenBuilder",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "isTokenBuilder",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "contract IDerivativeSpecification",
+          "name": "derivative",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "settlement",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_collateralToken",
+          "type": "address"
+        }
+      ],
+      "name": "buildTokens",
+      "outputs": [
+        {
+          "internalType": "contract IERC20MintedBurnable",
+          "name": "",
+          "type": "address"
+        },
+        {
+          "internalType": "contract IERC20MintedBurnable",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"contract IDerivativeSpecification\",\"name\":\"derivative\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"settlement\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_collateralToken\",\"type\":\"address\"}],\"name\":\"buildTokens\",\"outputs\":[{\"internalType\":\"contract IERC20MintedBurnable\",\"name\":\"\",\"type\":\"address\"},{\"internalType\":\"contract IERC20MintedBurnable\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"isTokenBuilder\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"pure\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/tokens/ITokenBuilder.sol\":\"ITokenBuilder\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1000000},\"remappings\":[]},\"sources\":{\"/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/IDerivativeSpecification.sol\":{\"keccak256\":\"0x670ed3fc22a9ae80a231b7989017152ebf4ff798fe02aeaba66c6742ff0f286f\",\"license\":\"GNU General Public License v3.0\",\"urls\":[\"bzz-raw://65a13f9b4c9d52686969a14b276e41f96442216829f1024428c52dc74fa6ee1a\",\"dweb:/ipfs/Qmd2UvtRsHFJme8PUQ1XJmShWUWdVRZHQHJvnAaGJR8CkP\"]},\"/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/tokens/IERC20MintedBurnable.sol\":{\"keccak256\":\"0x520f168a36eb6dd5473ece3bb3939d11896593d55ba58f43a25316841290bdd3\",\"license\":\"GNU General Public License v3.0\",\"urls\":[\"bzz-raw://753b7676f4719d5d9355f866b5c5c957c69883e7cedcaaa9db2a98e89fa77f92\",\"dweb:/ipfs/QmeUnhVKhWN8ARuxDs99uWe5ardT8DHvCrN4FC3EXaTH8S\"]},\"/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/tokens/ITokenBuilder.sol\":{\"keccak256\":\"0xd179cceee1febd444c98a337cd6b7df595365227f4654d492655b0aff692de54\",\"license\":\"GNU General Public License v3.0\",\"urls\":[\"bzz-raw://2874873f3c58665cf1e86f15377b539c36732cbed69568289514d175f5db29e9\",\"dweb:/ipfs/QmW7gLYhDBpGPhZNy2TsewwfjUQ4eLNCyMccSAucpDdvvW\"]},\"@openzeppelin/contracts/token/ERC20/IERC20.sol\":{\"keccak256\":\"0x5c26b39d26f7ed489e555d955dcd3e01872972e71fdd1528e93ec164e4f23385\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://efdc632af6960cf865dbc113665ea1f5b90eab75cc40ec062b2f6ae6da582017\",\"dweb:/ipfs/QmfAZFDuG62vxmAN9DnXApv7e7PMzPqi4RkqqZHLMSQiY5\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// \"SPDX-License-Identifier: GNU General Public License v3.0\"\n\npragma solidity 0.6.12;\n\nimport \"./IERC20MintedBurnable.sol\";\nimport \"../IDerivativeSpecification.sol\";\n\ninterface ITokenBuilder {\n    function isTokenBuilder() external pure returns(bool);\n    function buildTokens(IDerivativeSpecification derivative, uint settlement, address _collateralToken) external returns(IERC20MintedBurnable, IERC20MintedBurnable);\n}\n",
+  "sourcePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/tokens/ITokenBuilder.sol",
+  "ast": {
+    "absolutePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/tokens/ITokenBuilder.sol",
+    "exportedSymbols": {
+      "ITokenBuilder": [
+        7972
+      ]
+    },
+    "id": 7973,
+    "license": "GNU General Public License v3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7951,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "63:23:55"
+      },
+      {
+        "absolutePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/tokens/IERC20MintedBurnable.sol",
+        "file": "./IERC20MintedBurnable.sol",
+        "id": 7952,
+        "nodeType": "ImportDirective",
+        "scope": 7973,
+        "sourceUnit": 7950,
+        "src": "88:36:55",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/IDerivativeSpecification.sol",
+        "file": "../IDerivativeSpecification.sol",
+        "id": 7953,
+        "nodeType": "ImportDirective",
+        "scope": 7973,
+        "sourceUnit": 390,
+        "src": "125:41:55",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 7972,
+        "linearizedBaseContracts": [
+          7972
+        ],
+        "name": "ITokenBuilder",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "6eb1aaf4",
+            "id": 7958,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isTokenBuilder",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7954,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "221:2:55"
+            },
+            "returnParameters": {
+              "id": 7957,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7956,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7958,
+                  "src": "246:4:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 7955,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "246:4:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "245:6:55"
+            },
+            "scope": 7972,
+            "src": "198:54:55",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "b1db1358",
+            "id": 7971,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "buildTokens",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7965,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7960,
+                  "mutability": "mutable",
+                  "name": "derivative",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7971,
+                  "src": "278:35:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IDerivativeSpecification_$389",
+                    "typeString": "contract IDerivativeSpecification"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 7959,
+                    "name": "IDerivativeSpecification",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 389,
+                    "src": "278:24:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IDerivativeSpecification_$389",
+                      "typeString": "contract IDerivativeSpecification"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7962,
+                  "mutability": "mutable",
+                  "name": "settlement",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7971,
+                  "src": "315:15:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7961,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "315:4:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7964,
+                  "mutability": "mutable",
+                  "name": "_collateralToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7971,
+                  "src": "332:24:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7963,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "332:7:55",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "277:80:55"
+            },
+            "returnParameters": {
+              "id": 7970,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7967,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7971,
+                  "src": "375:20:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20MintedBurnable_$7949",
+                    "typeString": "contract IERC20MintedBurnable"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 7966,
+                    "name": "IERC20MintedBurnable",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 7949,
+                    "src": "375:20:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20MintedBurnable_$7949",
+                      "typeString": "contract IERC20MintedBurnable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7969,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7971,
+                  "src": "397:20:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20MintedBurnable_$7949",
+                    "typeString": "contract IERC20MintedBurnable"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 7968,
+                    "name": "IERC20MintedBurnable",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 7949,
+                    "src": "397:20:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20MintedBurnable_$7949",
+                      "typeString": "contract IERC20MintedBurnable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "374:44:55"
+            },
+            "scope": 7972,
+            "src": "257:162:55",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 7973,
+        "src": "168:253:55"
+      }
+    ],
+    "src": "63:359:55"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/tokens/ITokenBuilder.sol",
+    "exportedSymbols": {
+      "ITokenBuilder": [
+        7972
+      ]
+    },
+    "id": 7973,
+    "license": "GNU General Public License v3.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7951,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "63:23:55"
+      },
+      {
+        "absolutePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/tokens/IERC20MintedBurnable.sol",
+        "file": "./IERC20MintedBurnable.sol",
+        "id": 7952,
+        "nodeType": "ImportDirective",
+        "scope": 7973,
+        "sourceUnit": 7950,
+        "src": "88:36:55",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-protocol/contracts/IDerivativeSpecification.sol",
+        "file": "../IDerivativeSpecification.sol",
+        "id": 7953,
+        "nodeType": "ImportDirective",
+        "scope": 7973,
+        "sourceUnit": 390,
+        "src": "125:41:55",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 7972,
+        "linearizedBaseContracts": [
+          7972
+        ],
+        "name": "ITokenBuilder",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "6eb1aaf4",
+            "id": 7958,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isTokenBuilder",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7954,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "221:2:55"
+            },
+            "returnParameters": {
+              "id": 7957,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7956,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7958,
+                  "src": "246:4:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 7955,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "246:4:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "245:6:55"
+            },
+            "scope": 7972,
+            "src": "198:54:55",
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "functionSelector": "b1db1358",
+            "id": 7971,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "buildTokens",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 7965,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7960,
+                  "mutability": "mutable",
+                  "name": "derivative",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7971,
+                  "src": "278:35:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IDerivativeSpecification_$389",
+                    "typeString": "contract IDerivativeSpecification"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 7959,
+                    "name": "IDerivativeSpecification",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 389,
+                    "src": "278:24:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IDerivativeSpecification_$389",
+                      "typeString": "contract IDerivativeSpecification"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7962,
+                  "mutability": "mutable",
+                  "name": "settlement",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7971,
+                  "src": "315:15:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 7961,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "315:4:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7964,
+                  "mutability": "mutable",
+                  "name": "_collateralToken",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7971,
+                  "src": "332:24:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 7963,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "332:7:55",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "277:80:55"
+            },
+            "returnParameters": {
+              "id": 7970,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 7967,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7971,
+                  "src": "375:20:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20MintedBurnable_$7949",
+                    "typeString": "contract IERC20MintedBurnable"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 7966,
+                    "name": "IERC20MintedBurnable",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 7949,
+                    "src": "375:20:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20MintedBurnable_$7949",
+                      "typeString": "contract IERC20MintedBurnable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 7969,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 7971,
+                  "src": "397:20:55",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IERC20MintedBurnable_$7949",
+                    "typeString": "contract IERC20MintedBurnable"
+                  },
+                  "typeName": {
+                    "contractScope": null,
+                    "id": 7968,
+                    "name": "IERC20MintedBurnable",
+                    "nodeType": "UserDefinedTypeName",
+                    "referencedDeclaration": 7949,
+                    "src": "397:20:55",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IERC20MintedBurnable_$7949",
+                      "typeString": "contract IERC20MintedBurnable"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "374:44:55"
+            },
+            "scope": 7972,
+            "src": "257:162:55",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 7973,
+        "src": "168:253:55"
+      }
+    ],
+    "src": "63:359:55"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.3.1",
+  "updatedAt": "2020-11-03T13:08:28.517Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  }
+}
