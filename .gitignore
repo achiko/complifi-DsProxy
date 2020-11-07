@@ -48,6 +48,8 @@ ganache/db
 hide.txt
 memonic.wallet
 deployment.txt
+un.DS_Store
+yarn.lock
 
 # TypeScript v1 declaration files
 typings/
