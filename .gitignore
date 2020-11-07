@@ -44,6 +44,11 @@ node_modules/
 jspm_packages/
 ganache/db
 
+
+hide.txt
+memonic.wallet
+deployment.txt
+
 # TypeScript v1 declaration files
 typings/
 
