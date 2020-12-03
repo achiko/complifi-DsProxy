@@ -4,7 +4,6 @@ const DSProxy = artifacts.require("DSProxy");
 const CallActions = artifacts.require("CallActions");
 const stubTokenAbi = require("../Abi/complify/StubToken.json").abi;
 const vaultAbi = require("../Abi/complify/Vault.json").abi;
-const Black = artifacts.require("Black");
 
 const gasPrice = web3.utils.toWei(web3.utils.toBN(80), "gwei");
 
@@ -14,8 +13,9 @@ const gasParams = {
 };
 
 contract("CallActions", async (accounts) => {
-  const collateralAddress = "0x5f414D534C4687f493575E3aCB123757b2126eE7"; // stub
-  const vaultAddress = "0x0D4771055a2a252DF9c0F449Dc2A2c78A58880EB";
+
+  const collateralAddress = "0x715FA18f880de9a0B3587Fb49F58817aC9bf9873"; // stub token
+  const vaultAddress = "0x2f6B3b898EB0E462bC75fc34b48Dc699E40be0D1";
   const user = accounts[2];
 
   describe("DSProxy", () => {
@@ -43,7 +43,7 @@ contract("CallActions", async (accounts) => {
       userProxyInstance = await DSProxy.at(userProxyAddress);
     });
 
-    it("Test Local Stub Token Instance", async () => {
+    it.skip("Test Local Stub Token Instance", async () => {
       console.log("Mint Stub Tokens For local User ");
       await blackToken.mint(user, 150);
       const balance = new BigNumber(
@@ -72,17 +72,27 @@ contract("CallActions", async (accounts) => {
     });
 
     it("... Execute Vault Mint Via DsProxy ", async () => {
-      const { decimals, balanceOf, allowance } = stubTokenInstance.methods;
+      const {
+        decimals,
+        balanceOf,
+        allowance,
+        approve,
+      } = stubTokenInstance.methods;
 
-      console.log("Balance : ", await balanceOf(user).call());
-      console.log("Allowance : ", await allowance(user, vaultAddress).call());
-      console.log("Vault Balance : ", await balanceOf(vaultAddress).call());
+      console.log("User [2] Balance : ", await balanceOf(user).call());
 
       const tokenDecimals = await decimals().call();
-      const amount = new BigNumber(7);
+      console.log("Token Decimals ", tokenDecimals);
+      const amount = new BigNumber(1);
+      await approve(userProxyAddress, amount).send({ from: user });
+
+      console.log(
+        "DsProxy Allowance : ",
+        await allowance(user, userProxyAddress).call()
+      );
 
       const params = [vaultAddress, collateralAddress, amount.toString()];
-      //const params = [vaultAddress, blackToken.address, amount.toString()];
+      // const params = [vaultAddress, blackToken.address, amount.toString()];
 
       const functionSig = web3.eth.abi.encodeFunctionSignature(
         "callMint(address,address,uint256)"
@@ -94,7 +104,6 @@ contract("CallActions", async (accounts) => {
 
       const argumentData = functionData.substring(2);
       const inputData = `${functionSig}${argumentData}`;
-
       console.log("Input Data : ", inputData);
 
       const response = await userProxyInstance.methods[
@@ -113,15 +122,10 @@ contract("CallActions", async (accounts) => {
       console.log("- Tx - ");
       console.log(tx.logs);
 
-      console.log(
-        "Black Token Allowance : ",
-        new BigNumber(
-          await blackToken.allowance(user, vaultAddress)
-        ).toNumber(),
-        new BigNumber(
-          await blackToken.allowance(user, userProxyAddress)
-        ).toNumber()
-      );
+      // console.log(
+      //   "Proxied contract Balance After Call : ",
+      //   await balanceOf(callActionsInstance.address).call()
+      // );
 
       assert.equal(true, true);
     });
