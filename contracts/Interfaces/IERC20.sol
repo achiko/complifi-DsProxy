@@ -1,6 +1,6 @@
 pragma solidity 0.5.12;
 
-interface IIERC20 {
+interface IERC20 {
     function name() external view returns (string memory);
 
     function symbol() external view returns (string memory);

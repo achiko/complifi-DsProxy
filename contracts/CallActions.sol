@@ -1,16 +1,14 @@
 pragma solidity >=0.4.22 <0.8.0;
 
 // To Do : rename IIERC20 to IERC20
-import "./Interfaces/IIERC20.sol";
+import "./Interfaces/IERC20.sol";
 import "./Interfaces/IVAULT.sol";
 
 contract CallActions {
 
     struct Vars {
-        address primaryTokenAddress;
-        address complementTokenAddress;
-        IIERC20 primaryToken;
-        IIERC20 complementToken;
+        IERC20 primaryToken;
+        IERC20 complementToken;
         uint256 primaryTokenBalance;
         uint256 complementTokenBalance;
     }
@@ -24,14 +22,11 @@ contract CallActions {
         
         Vars memory vars;
         
-        IIERC20 token = IIERC20(_collateralToken);
+        IERC20 token = IERC20(_collateralToken);
         IVAULT vault = IVAULT(_vaultAddress);
 
-        vars.primaryTokenAddress = vault.primaryToken();
-        vars.complementTokenAddress = vault.complementToken();
-
-        vars.primaryToken = IIERC20(vault.primaryToken());
-        vars.complementToken = IIERC20(vault.complementToken());
+        vars.primaryToken = IERC20(vault.primaryToken());
+        vars.complementToken = IERC20(vault.complementToken());
 
         // 1. Transfer collateral tokens from users wallet to ProxyContract
         require(token.transferFrom(msg.sender, address(this), _collateralAmount), "ERR_TRANSFER_FAILED");
@@ -50,7 +45,7 @@ contract CallActions {
         require(vars.complementToken.transfer(msg.sender,vars.complementTokenBalance), "ERR_TRANSFER_COMPLEMENT_TOKEN");
     }
 
-    // To Do Rempve :
+    // To Do Remove :
     // DelegateCall version 
     // function callMintDelegate(
     //     address _vaultAddress,

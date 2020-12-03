@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e9258c0-dfdc-47c0-b0ec-8b18972da7ea" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/complifi-DsProxy.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/CallActions.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/CallActions.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/contracts/IVAULT.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/IVAULT.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contracts/CallActions.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/CallActions.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/Interfaces/IVAULT.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/Interfaces/IVAULT.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/Interfaces/IIERC20.sol" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1606985867047</updated>
-      <workItem from="1606985870083" duration="3725000" />
+      <workItem from="1606985870083" duration="3946000" />
     </task>
     <servers />
   </component>
