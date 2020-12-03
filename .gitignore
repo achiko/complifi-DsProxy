@@ -24,6 +24,4 @@ yarn-debug.log*
 yarn-error.log*
 
 hide.txt
-/scripts/*.js
-/Abi
-
+/scripts
