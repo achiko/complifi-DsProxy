@@ -4,7 +4,7 @@ const DSProxyFactory = artifacts.require("DSProxyFactory");
 const DSProxy = artifacts.require("DSProxy");
 const CallActions = artifacts.require("CallActions");
 const { snapshot, revert } = require("./utils");
-const { gasParams, stubTokenAbi } = require("./config");
+const { gasParams, stubTokenAbi, vaultAbi, erc20Abi } = require("./config");
 
 contract("CallActions", async (accounts) => {
   const vaultAddress = process.env.VAULT_CONTRACT;
@@ -15,24 +15,67 @@ contract("CallActions", async (accounts) => {
 
   describe("DSProxy", () => {
     let stubTokenInstance;
-    // let vaultInstance;
+    let vaultInstance;
     let callActionsInstance;
     let proxyFactory;
     let userProxyAddress;
     let userProxyInstance;
     let snapshotId;
+    let primaryTokenInstance;
+    let complementTokenInstance;
 
     before(async () => {
       stubTokenInstance = new web3.eth.Contract(
         stubTokenAbi,
         collateralAddress
       );
-      // vaultInstance = new web3.eth.Contract(vaultAbi, vaultAddress);
+
+      console.log(".................................................");
+      console.log("::::::::: Vault Instance ::::::::::");
+      vaultInstance = new web3.eth.Contract(vaultAbi, vaultAddress);
+      const { primaryToken, complementToken } = vaultInstance.methods;
+
+      const primaryTokenAddress = await primaryToken().call();
+      const complementTokenAddress = await complementToken().call();
+
+      primaryTokenInstance = new web3.eth.Contract(
+        erc20Abi,
+        primaryTokenAddress
+      );
+      complementTokenInstance = new web3.eth.Contract(
+        erc20Abi,
+        complementTokenAddress
+      );
+      console.log("primaryTokenAddress : ", primaryTokenAddress);
+      console.log("complementTokenAddress : ", complementTokenAddress);
+
+      const {
+        name: primaryTokenName,
+        symbol: primaryTokenSymbol,
+      } = primaryTokenInstance.methods;
+      const {
+        name: complementTokenName,
+        symbol: complementTokenSymbol,
+      } = complementTokenInstance.methods;
+
+      console.log(
+        "Primary Token : ",
+        await primaryTokenName().call(),
+        await primaryTokenSymbol().call()
+      );
+      console.log(
+        "Complement Token : ",
+        await complementTokenName().call(),
+        await complementTokenSymbol().call()
+      );
+      console.log(".................................................");
+
       callActionsInstance = await CallActions.deployed();
       proxyFactory = await DSProxyFactory.deployed();
       userProxyAddress = await proxyFactory.build.call({ from: user }); // Get proxy address
       await proxyFactory.build({ from: user }); // Build proxy
       userProxyInstance = await DSProxy.at(userProxyAddress);
+
     });
 
     beforeEach(async () => {
@@ -43,7 +86,7 @@ contract("CallActions", async (accounts) => {
       await revert(snapshotId);
     });
 
-    it.skip("... Mint Tokens Via DsProxy ", async () => {
+    it("... Mint Tokens Via DsProxy ", async () => {
       const { balanceOf, allowance, approve } = stubTokenInstance.methods;
 
       console.log("User Accounts[2] Balance : ", await balanceOf(user).call());
@@ -131,10 +174,19 @@ contract("CallActions", async (accounts) => {
         "execute(address,bytes)"
       ](callActionsInstance.address, inputData, { from: user1, ...gasParams });
 
-      console.log("- Tx - ");
-      console.log(tx);
+      // console.log("- Tx - ");
+      // console.log(tx);
 
       assert.equal(tx.receipt.status, true);
+
+      const primaryTokenBalance = await primaryTokenInstance.methods.balanceOf(user1).call();
+      const complementTokenBalance = await primaryTokenInstance.methods.balanceOf(user1).call();
+      console.log("user1 PrimaryTokenBalance :  ",  primaryTokenBalance);
+      console.log("user1 ComplementTokenBalance :  ",  complementTokenBalance);
+
+      assert.equal(primaryTokenBalance, collateralAmount.div(2));
+      assert.equal(complementTokenBalance, collateralAmount.div(2));
+
     });
   });
 });
