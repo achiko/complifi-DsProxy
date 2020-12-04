@@ -95,7 +95,7 @@ contract("CallActions", async (accounts) => {
       assert.isTrue(tokenBalance.isEqualTo(collateralAmount));
 
       const user1ProxyAddress = await proxyFactory.build.call({ from: user1 });
-      await proxyFactory.build({ from: user });
+      await proxyFactory.build({ from: user1 });
       const user1ProxyInstance = await DSProxy.at(user1ProxyAddress);
 
       await approve(user1ProxyAddress, collateralAmount).send({ from: user1 });
@@ -106,10 +106,11 @@ contract("CallActions", async (accounts) => {
 
       assert.isTrue(
         new BigNumber(
-          await allowance(user1, userProxyAddress).call()
+          await allowance(user1, user1ProxyAddress).call()
         ).isEqualTo(collateralAmount)
       );
 
+      // TODO: This is a duplicate code (must be refactored)
       const params = [
         vaultAddress,
         collateralAddress,
@@ -128,7 +129,7 @@ contract("CallActions", async (accounts) => {
 
       const tx = await user1ProxyInstance.methods[
         "execute(address,bytes)"
-      ](callActionsInstance.address, inputData, { from: user, ...gasParams });
+      ](callActionsInstance.address, inputData, { from: user1, ...gasParams });
 
       console.log("- Tx - ");
       console.log(tx);

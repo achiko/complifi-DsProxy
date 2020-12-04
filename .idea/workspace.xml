@@ -20,13 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e9258c0-dfdc-47c0-b0ec-8b18972da7ea" name="Default Changelist" comment="last changes">
-      <change afterPath="$PROJECT_DIR$/test/config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/utils.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/contracts/CallActions.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/CallActions.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,8 +81,16 @@
       <option name="presentableId" value="Default" />
       <updated>1606985867047</updated>
       <workItem from="1606985870083" duration="3946000" />
-      <workItem from="1606993162353" duration="8417000" />
+      <workItem from="1606993162353" duration="9471000" />
     </task>
+    <task id="LOCAL-00001" summary="last changes">
+      <created>1607089351651</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607089351652</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,5 +120,9 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="469" y="190" key="SettingsEditor/0.23.1920.1057@0.23.1920.1057" timestamp="1606987265124" />
+    <state x="668" y="314" width="584" height="474" key="find.popup" timestamp="1607090787962">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="668" y="314" width="584" height="474" key="find.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1607090787962" />
   </component>
 </project>
