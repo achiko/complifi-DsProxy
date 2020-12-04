@@ -1,6 +1,5 @@
 pragma solidity >=0.4.22 <0.8.0;
 
-// To Do : rename IIERC20 to IERC20
 import "./Interfaces/IERC20.sol";
 import "./Interfaces/IVAULT.sol";
 
@@ -41,7 +40,7 @@ contract CallActions {
         vars.complementTokenBalance = vars.complementToken.balanceOf(address(this));
 
         // 4. Transfer Primary & Complement tokens to user wallet
-        require( vars.primaryToken.transfer(msg.sender,vars.primaryTokenBalance), "ERR_TRANSFER_PRIMARY_TOKEN");
+        require(vars.primaryToken.transfer(msg.sender,vars.primaryTokenBalance), "ERR_TRANSFER_PRIMARY_TOKEN");
         require(vars.complementToken.transfer(msg.sender,vars.complementTokenBalance), "ERR_TRANSFER_COMPLEMENT_TOKEN");
     }
 
