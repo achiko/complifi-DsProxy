@@ -16,13 +16,18 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:master" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e9258c0-dfdc-47c0-b0ec-8b18972da7ea" name="Default Changelist" comment="last changes">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="1e9258c0-dfdc-47c0-b0ec-8b18972da7ea" name="Default Changelist" comment="Tests fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/CallActions.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/CallActions.sol" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +39,9 @@
   </component>
   <component name="MacroExpansionManager">
     <option name="directoryName" value="sy8vl0qe" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="showPreview" value="true" />
   </component>
   <component name="ProjectId" id="1l8jyMViSedCB2yQThcZYeA3NEk" />
   <component name="ProjectLevelVcsManager">
@@ -81,7 +89,7 @@
       <option name="presentableId" value="Default" />
       <updated>1606985867047</updated>
       <workItem from="1606985870083" duration="3946000" />
-      <workItem from="1606993162353" duration="9471000" />
+      <workItem from="1606993162353" duration="9692000" />
     </task>
     <task id="LOCAL-00001" summary="last changes">
       <created>1607089351651</created>
@@ -90,7 +98,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607089351652</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Tests fixed">
+      <created>1607090946736</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607090946736</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -101,7 +116,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -109,7 +136,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="last changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="last changes" />
+    <MESSAGE value="Tests fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tests fixed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="291" y="96" width="1372" height="920" key="CommitChangelistDialog2" timestamp="1607089143177">
