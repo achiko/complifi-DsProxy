@@ -26,7 +26,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e9258c0-dfdc-47c0-b0ec-8b18972da7ea" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/complifi-DsProxy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/complifi-DsProxy.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/CallActions.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/CallActions.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/contracts/IVAULT.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/contracts/IVAULT.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/CallActions.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/CallActions.sol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/contracts/Interfaces/IVAULT.sol" beforeDir="false" afterPath="$PROJECT_DIR$/contracts/Interfaces/IVAULT.sol" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.js" afterDir="false" />
     </list>
@@ -76,7 +82,9 @@
       <updated>1606985867047</updated>
       <workItem from="1606985870083" duration="3946000" />
       <workItem from="1606993162353" duration="10127000" />
-      <workItem from="1607091618021" duration="2670000" />
+      <workItem from="1607091618021" duration="4183000" />
+      <workItem from="1607340790729" duration="7991000" />
+      <workItem from="1607510097159" duration="8691000" />
     </task>
     <task id="LOCAL-00001" summary="last changes">
       <created>1607089351651</created>
@@ -99,7 +107,14 @@
       <option name="project" value="LOCAL" />
       <updated>1607091111584</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Test : Check primary and complement token balances">
+      <created>1607095106032</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1607095106032</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,7 +131,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
@@ -147,7 +162,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="last changes" />
     <MESSAGE value="Tests fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests fixed" />
+    <MESSAGE value="Test : Check primary and complement token balances" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test : Check primary and complement token balances" />
   </component>
   <component name="WindowStateProjectService">
     <state x="700" y="384" key="#Notifications" timestamp="1607091320969">
@@ -174,6 +190,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="668" y="314" width="584" height="474" key="find.popup/0.23.1920.1057@0.23.1920.1057" timestamp="1607090787962" />
+    <state x="239" y="98" key="new project wizard" timestamp="1607349066122">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="239" y="98" key="new project wizard/0.23.1280.777@0.23.1280.777" timestamp="1607349066122" />
     <state x="625" y="258" width="670" height="676" key="search.everywhere.popup" timestamp="1607092592808">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>

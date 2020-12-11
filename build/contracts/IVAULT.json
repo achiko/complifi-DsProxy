@@ -18,6 +18,21 @@
     },
     {
       "constant": false,
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tokenAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "refund",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
       "inputs": [],
       "name": "primaryToken",
       "outputs": [
@@ -47,32 +62,32 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.12+commit.7709ece9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"complementToken\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_collateralAmount\",\"type\":\"uint256\"}],\"name\":\"mint\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"primaryToken\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/achiko/Documents/elva/projects/compli.fi/complifi-DsProxy/contracts/Interfaces/IVAULT.sol\":\"IVAULT\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/achiko/Documents/elva/projects/compli.fi/complifi-DsProxy/contracts/Interfaces/IVAULT.sol\":{\"keccak256\":\"0x6b2193b8a5d362b7cd002b2bb3f5ce6b8c2e9c6751e06bc6da42366011fdeb65\",\"urls\":[\"bzz-raw://56edbe33df6e90e885c48471b7a77626663238369b5b4ad1eae23f0abb3dd4ba\",\"dweb:/ipfs/QmTUaYBwFpGb9V4H6AEe2LR5BUKKKiJ1rAmuh9TEGJP3nh\"]}},\"version\":1}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.12+commit.7709ece9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"complementToken\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_collateralAmount\",\"type\":\"uint256\"}],\"name\":\"mint\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[],\"name\":\"primaryToken\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenAmount\",\"type\":\"uint256\"}],\"name\":\"refund\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/achiko/Documents/elva/projects/compli.fi/complifi-DsProxy/contracts/Interfaces/IVAULT.sol\":\"IVAULT\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/achiko/Documents/elva/projects/compli.fi/complifi-DsProxy/contracts/Interfaces/IVAULT.sol\":{\"keccak256\":\"0x8e2865dcf55ef93a06719105be88d06ddbb3fa4cce85aadc55e364bac4c55d97\",\"urls\":[\"bzz-raw://d94f7dd57aa0fbdd424ce8c2a9594d6a7d1c28f1e33c969bf8a0978039e4c2e2\",\"dweb:/ipfs/QmNXzBDXfU6WRuaUDB1BFE4HrmebVpUJX8tRr6wPk2anmb\"]}},\"version\":1}",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
   "deployedSourceMap": "",
-  "source": "pragma solidity 0.5.12;\n\ninterface IVAULT {\n    function mint(uint256 _collateralAmount) external;\n    function primaryToken() external returns (address);\n    function complementToken() external returns (address);\n}\n",
+  "source": "pragma solidity 0.5.12;\n\ninterface IVAULT {\n    function mint(uint256 _collateralAmount) external;\n    function refund(uint256 _tokenAmount) external;\n    function primaryToken() external returns (address);\n    function complementToken() external returns (address);\n}\n",
   "sourcePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-DsProxy/contracts/Interfaces/IVAULT.sol",
   "ast": {
     "absolutePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-DsProxy/contracts/Interfaces/IVAULT.sol",
     "exportedSymbols": {
       "IVAULT": [
-        707
+        729
       ]
     },
-    "id": 708,
+    "id": 730,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 691,
+        "id": 708,
         "literals": [
           "solidity",
           "0.5",
           ".12"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:4"
+        "src": "0:23:3"
       },
       {
         "baseContracts": [],
@@ -80,9 +95,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 707,
+        "id": 729,
         "linearizedBaseContracts": [
-          707
+          729
         ],
         "name": "IVAULT",
         "nodeType": "ContractDefinition",
@@ -90,23 +105,23 @@
           {
             "body": null,
             "documentation": null,
-            "id": 696,
+            "id": 713,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "mint",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 694,
+              "id": 711,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 693,
+                  "id": 710,
                   "name": "_collateralAmount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 696,
-                  "src": "62:25:4",
+                  "scope": 713,
+                  "src": "62:25:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -114,10 +129,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 692,
+                    "id": 709,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "62:7:4",
+                    "src": "62:7:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -127,16 +142,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "61:27:4"
+              "src": "61:27:3"
             },
             "returnParameters": {
-              "id": 695,
+              "id": 712,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "97:0:4"
+              "src": "97:0:3"
             },
-            "scope": 707,
-            "src": "48:50:4",
+            "scope": 729,
+            "src": "48:50:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -144,29 +159,83 @@
           {
             "body": null,
             "documentation": null,
-            "id": 701,
+            "id": 718,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "refund",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 716,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 715,
+                  "name": "_tokenAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 718,
+                  "src": "119:20:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 714,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "119:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "118:22:3"
+            },
+            "returnParameters": {
+              "id": 717,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "149:0:3"
+            },
+            "scope": 729,
+            "src": "103:47:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 723,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "primaryToken",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 697,
+              "id": 719,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "124:2:4"
+              "src": "176:2:3"
             },
             "returnParameters": {
-              "id": 700,
+              "id": 722,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 699,
+                  "id": 721,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 701,
-                  "src": "145:7:4",
+                  "scope": 723,
+                  "src": "197:7:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -174,10 +243,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 698,
+                    "id": 720,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "145:7:4",
+                    "src": "197:7:3",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -188,10 +257,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "144:9:4"
+              "src": "196:9:3"
             },
-            "scope": 707,
-            "src": "103:51:4",
+            "scope": 729,
+            "src": "155:51:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -199,29 +268,29 @@
           {
             "body": null,
             "documentation": null,
-            "id": 706,
+            "id": 728,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "complementToken",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 702,
+              "id": 724,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "183:2:4"
+              "src": "235:2:3"
             },
             "returnParameters": {
-              "id": 705,
+              "id": 727,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 704,
+                  "id": 726,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 706,
-                  "src": "204:7:4",
+                  "scope": 728,
+                  "src": "256:7:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -229,10 +298,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 703,
+                    "id": 725,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "204:7:4",
+                    "src": "256:7:3",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -243,40 +312,40 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "203:9:4"
+              "src": "255:9:3"
             },
-            "scope": 707,
-            "src": "159:54:4",
+            "scope": 729,
+            "src": "211:54:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 708,
-        "src": "25:190:4"
+        "scope": 730,
+        "src": "25:242:3"
       }
     ],
-    "src": "0:216:4"
+    "src": "0:268:3"
   },
   "legacyAST": {
     "absolutePath": "/Users/achiko/Documents/elva/projects/compli.fi/complifi-DsProxy/contracts/Interfaces/IVAULT.sol",
     "exportedSymbols": {
       "IVAULT": [
-        707
+        729
       ]
     },
-    "id": 708,
+    "id": 730,
     "nodeType": "SourceUnit",
     "nodes": [
       {
-        "id": 691,
+        "id": 708,
         "literals": [
           "solidity",
           "0.5",
           ".12"
         ],
         "nodeType": "PragmaDirective",
-        "src": "0:23:4"
+        "src": "0:23:3"
       },
       {
         "baseContracts": [],
@@ -284,9 +353,9 @@
         "contractKind": "interface",
         "documentation": null,
         "fullyImplemented": false,
-        "id": 707,
+        "id": 729,
         "linearizedBaseContracts": [
-          707
+          729
         ],
         "name": "IVAULT",
         "nodeType": "ContractDefinition",
@@ -294,23 +363,23 @@
           {
             "body": null,
             "documentation": null,
-            "id": 696,
+            "id": 713,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "mint",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 694,
+              "id": 711,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 693,
+                  "id": 710,
                   "name": "_collateralAmount",
                   "nodeType": "VariableDeclaration",
-                  "scope": 696,
-                  "src": "62:25:4",
+                  "scope": 713,
+                  "src": "62:25:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -318,10 +387,10 @@
                     "typeString": "uint256"
                   },
                   "typeName": {
-                    "id": 692,
+                    "id": 709,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "62:7:4",
+                    "src": "62:7:3",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -331,16 +400,16 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "61:27:4"
+              "src": "61:27:3"
             },
             "returnParameters": {
-              "id": 695,
+              "id": 712,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "97:0:4"
+              "src": "97:0:3"
             },
-            "scope": 707,
-            "src": "48:50:4",
+            "scope": 729,
+            "src": "48:50:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -348,29 +417,83 @@
           {
             "body": null,
             "documentation": null,
-            "id": 701,
+            "id": 718,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "refund",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 716,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 715,
+                  "name": "_tokenAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 718,
+                  "src": "119:20:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 714,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "119:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "118:22:3"
+            },
+            "returnParameters": {
+              "id": 717,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "149:0:3"
+            },
+            "scope": 729,
+            "src": "103:47:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": null,
+            "id": 723,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "primaryToken",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 697,
+              "id": 719,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "124:2:4"
+              "src": "176:2:3"
             },
             "returnParameters": {
-              "id": 700,
+              "id": 722,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 699,
+                  "id": 721,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 701,
-                  "src": "145:7:4",
+                  "scope": 723,
+                  "src": "197:7:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -378,10 +501,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 698,
+                    "id": 720,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "145:7:4",
+                    "src": "197:7:3",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -392,10 +515,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "144:9:4"
+              "src": "196:9:3"
             },
-            "scope": 707,
-            "src": "103:51:4",
+            "scope": 729,
+            "src": "155:51:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -403,29 +526,29 @@
           {
             "body": null,
             "documentation": null,
-            "id": 706,
+            "id": 728,
             "implemented": false,
             "kind": "function",
             "modifiers": [],
             "name": "complementToken",
             "nodeType": "FunctionDefinition",
             "parameters": {
-              "id": 702,
+              "id": 724,
               "nodeType": "ParameterList",
               "parameters": [],
-              "src": "183:2:4"
+              "src": "235:2:3"
             },
             "returnParameters": {
-              "id": 705,
+              "id": 727,
               "nodeType": "ParameterList",
               "parameters": [
                 {
                   "constant": false,
-                  "id": 704,
+                  "id": 726,
                   "name": "",
                   "nodeType": "VariableDeclaration",
-                  "scope": 706,
-                  "src": "204:7:4",
+                  "scope": 728,
+                  "src": "256:7:3",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -433,10 +556,10 @@
                     "typeString": "address"
                   },
                   "typeName": {
-                    "id": 703,
+                    "id": 725,
                     "name": "address",
                     "nodeType": "ElementaryTypeName",
-                    "src": "204:7:4",
+                    "src": "256:7:3",
                     "stateMutability": "nonpayable",
                     "typeDescriptions": {
                       "typeIdentifier": "t_address",
@@ -447,20 +570,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "203:9:4"
+              "src": "255:9:3"
             },
-            "scope": 707,
-            "src": "159:54:4",
+            "scope": 729,
+            "src": "211:54:3",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
           }
         ],
-        "scope": 708,
-        "src": "25:190:4"
+        "scope": 730,
+        "src": "25:242:3"
       }
     ],
-    "src": "0:216:4"
+    "src": "0:268:3"
   },
   "compiler": {
     "name": "solc",
@@ -468,7 +591,7 @@
   },
   "networks": {},
   "schemaVersion": "3.3.1",
-  "updatedAt": "2020-12-02T14:54:27.353Z",
+  "updatedAt": "2020-12-07T19:15:06.525Z",
   "devdoc": {
     "methods": {}
   },
